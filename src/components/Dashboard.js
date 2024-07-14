@@ -75,14 +75,38 @@ function Dashboard() {
       </ul>
       <h2>Add New Student</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required />
-        <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} placeholder="Date of Birth" required />
-        <input type="text" name="gender" value={formData.gender} onChange={handleChange} placeholder="Gender" required />
-        <input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone" />
-        <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
-        <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Address" required />
-        <input type="date" name="dateOfEnrollment" value={formData.dateOfEnrollment} onChange={handleChange} placeholder="Date of Enrollment" required />
-        <input type="text" name="areaOfStudy" value={formData.areaOfStudy} onChange={handleChange} placeholder="Area of Study" required />
+        <div>
+          <label>Name</label>
+          <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required />
+        </div>
+        <div>
+          <label>Date of Birth </label>
+          <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} required />
+        </div>
+        <div>
+          <label>Gender</label>
+          <input type="text" name="gender" value={formData.gender} onChange={handleChange} placeholder="Gender" required />
+        </div>
+        <div>
+          <label>Phone</label>
+          <input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
+        </div>
+        <div>
+          <label>Address</label>
+          <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Address" required />
+        </div>
+        <div>
+          <label>Date of Enrollment </label>
+          <input type="date" name="dateOfEnrollment" value={formData.dateOfEnrollment} onChange={handleChange} required />
+        </div>
+        <div>
+          <label>Area of Study</label>
+          <input type="text" name="areaOfStudy" value={formData.areaOfStudy} onChange={handleChange} placeholder="Area of Study" required />
+        </div>
         <button type="submit">Add Student</button>
       </form>
     </div>
@@ -90,5 +114,6 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
 
 
