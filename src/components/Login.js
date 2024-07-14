@@ -10,7 +10,7 @@ function Login() {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('/api/user/login', { email, password });
+      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/user/login`, { email, password });
       console.log('Login successful', response.data);
       // You would typically handle routing and storing the auth token here
     } catch (error) {
@@ -35,3 +35,4 @@ function Login() {
 }
 
 export default Login;
+
