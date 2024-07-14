@@ -25,7 +25,7 @@ function Registration() {
         }
       };
       const body = JSON.stringify({ name, email, password, instituteName, instituteRegistrationNumber });
-      const res = await axios.post('/api/user/register', body, config);
+      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/user/register`, body, config);
       console.log('Registered Successfully', res.data);
     } catch (error) {
       console.error('Error during registration', error.response.data);
