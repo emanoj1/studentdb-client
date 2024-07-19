@@ -7,6 +7,7 @@ function About() {
     <div>
       <h1>About Us</h1>
       <p>The StudentDB, a Student Management System was developed to provide educational institutions with a robust tool for managing student data and enhancing administrative processes.</p>
+      <p>Please register and try the system out today!</p>
     </div>
   );
 }
