@@ -43,7 +43,7 @@ function Dashboard() {
         }
       };
       const body = JSON.stringify(formData);
-      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/students/add-students`, body, config);
+      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/students`, body, config);
       setStudents([...students, res.data]);  // Add new student to state
       alert('Student added successfully!');
     } catch (err) {
