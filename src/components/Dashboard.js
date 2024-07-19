@@ -20,7 +20,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const res = await axios.get('/api/students');
+        const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/students`);
         setStudents(res.data);
       } catch (err) {
         console.error('Error fetching students', err);
@@ -43,21 +43,23 @@ function Dashboard() {
         }
       };
       const body = JSON.stringify(formData);
-      const res = await axios.post('/api/students', body, config);
+      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/students/add-students`, body, config);
       setStudents([...students, res.data]);  // Add new student to state
       alert('Student added successfully!');
     } catch (err) {
-      console.error('Failed to add student', err.response.data);
+      console.error('Failed to add student', err);
+      alert('Failed to add student');
     }
   };
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/students/${id}`);
+      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/students/${id}`);
       setStudents(students.filter(student => student._id !== id));
       alert('Student deleted successfully!');
     } catch (err) {
-      console.error('Failed to delete student', err.response.data);
+      console.error('Failed to delete student', err);
+      alert('Failed to delete student');
     }
   };
 
@@ -80,7 +82,7 @@ function Dashboard() {
           <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required />
         </div>
         <div>
-          <label>Date of Birth </label>
+          <label>Date of Birth (dd/mm/yyyy)</label>
           <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} required />
         </div>
         <div>
@@ -100,7 +102,7 @@ function Dashboard() {
           <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Address" required />
         </div>
         <div>
-          <label>Date of Enrollment </label>
+          <label>Date of Enrollment (dd/mm/yyyy)</label>
           <input type="date" name="dateOfEnrollment" value={formData.dateOfEnrollment} onChange={handleChange} required />
         </div>
         <div>
@@ -114,6 +116,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-
-
-
