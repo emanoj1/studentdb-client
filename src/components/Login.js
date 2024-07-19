@@ -2,21 +2,25 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/user/login`, { email, password });
       console.log('Login successful', response);
-      // Assuming the token is in response.data
       const token = response.data.token;
       console.log('Token:', token);
-      // Handle successful login, e.g., store the token, redirect, etc.
+      // Store the token in localStorage or state management
+      localStorage.setItem('auth-token', token);
+      // Redirect to the Dashboard
+      navigate('/dashboard');
     } catch (error) {
       console.error('Failed to login', error);
       setError(error.response?.data?.message || 'An error occurred during login');
@@ -43,5 +47,6 @@ function Login() {
 }
 
 export default Login;
+
 
 
