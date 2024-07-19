@@ -7,7 +7,8 @@ function AdminSettings() {
     name: '',
     email: '',
     instituteName: '',
-    instituteRegistrationNumber: ''
+    instituteRegistrationNumber: '',
+    password: ''
   });
 
   useEffect(() => {
@@ -69,6 +70,10 @@ function AdminSettings() {
           <label>Institute Registration Number</label>
           <input type="text" name="instituteRegistrationNumber" value={adminData.instituteRegistrationNumber} onChange={handleChange} required />
         </div>
+        <div>
+          <label>Update Password</label>
+          <input type="password" name="password" value={adminData.password} onChange={handleChange} />
+        </div>
         <button type="submit">Update Admin Settings</button>
       </form>
     </div>
@@ -76,3 +81,4 @@ function AdminSettings() {
 }
 
 export default AdminSettings;
+
