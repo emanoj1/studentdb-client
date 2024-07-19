@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Dashboard.css'; // Import the CSS file
 
 function Dashboard() {
   const [students, setStudents] = useState([]);
@@ -16,7 +17,6 @@ function Dashboard() {
     areaOfStudy: ''
   });
 
-  // Fetch students when component mounts
   useEffect(() => {
     const fetchStudents = async () => {
       try {
@@ -67,10 +67,17 @@ function Dashboard() {
     <div>
       <h1>Dashboard</h1>
       <h2>Students</h2>
-      <ul>
+      <ul className="student-list">
         {students.map(student => (
-          <li key={student._id}>
-            {student.name} - {student.email}
+          <li key={student._id} className="student-item">
+            <span>{student.name}</span>
+            <span>{student.dateOfBirth}</span>
+            <span>{student.gender}</span>
+            <span>{student.phone}</span>
+            <span>{student.email}</span>
+            <span>{student.address}</span>
+            <span>{student.dateOfEnrollment}</span>
+            <span>{student.areaOfStudy}</span>
             <button onClick={() => handleDelete(student._id)}>Delete</button>
           </li>
         ))}
@@ -116,3 +123,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
