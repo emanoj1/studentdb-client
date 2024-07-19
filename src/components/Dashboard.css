@@ -24,6 +24,15 @@
   .student-item button {
     flex: 0 0 auto;
   }
+
+  /* CSS to style the statistics section */
+  .statistics {
+    margin-bottom: 20px;
+  }
+  
+  .statistics p {
+    margin: 5px 0;
+  }
   
   @media (max-width: 768px) {
     .student-item {
