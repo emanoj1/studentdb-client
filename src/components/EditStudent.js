@@ -17,7 +17,7 @@ function EditStudent({ student, setEditingStudent }) {
         }
       };
       const body = JSON.stringify(formData);
-      await axios.put(`${process.env.REACT_APP_API_BASE_URL}/students/${student._id}`, body, config);
+      await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/students/${student._id}`, body, config);
       alert('Student updated successfully!');
       setEditingStudent(null); // Close the edit form after successful update
     } catch (err) {
