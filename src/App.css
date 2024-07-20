@@ -17,11 +17,13 @@
   font-weight: bold;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-links {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .nav-links a, .nav-links button {
@@ -33,7 +35,12 @@
   cursor: pointer;
 }
 
-/* Side panel styles */
+/* Main container and side panel styles */
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
 .side-panel {
   flex: 0 0 200px;
   background-color: #f4f4f4;
@@ -96,6 +103,9 @@
     margin-bottom: 0.5rem;
   }
 }
+
+
+
 
 
 
