@@ -21,10 +21,18 @@ const App = () => {
     navigate('/');
   };
 
+  const handleLogoClick = () => {
+    if (authToken) {
+      navigate('/dashboard');
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <div className="App">
       <nav className="main-nav">
-        <Link to="/dashboard" className="logo">Logo</Link>
+        <span onClick={handleLogoClick} className="logo">Logo</span>
         <div className="nav-links">
           {authToken ? (
             <button onClick={handleLogout}>Logout</button>
@@ -39,16 +47,6 @@ const App = () => {
           )}
         </div>
       </nav>
-      <div className="side-panel-mobile">
-        {authToken && (
-          <ul>
-            <li><Link to="/dashboard">Dashboard</Link></li>
-            <li><Link to="/student-list">Student List</Link></li>
-            <li><Link to="/add-student">Add Students</Link></li>
-            <li><Link to="/admin-settings">Admin Settings</Link></li>
-          </ul>
-        )}
-      </div>
       <div className="main-container">
         {authToken && (
           <div className="side-panel">
@@ -79,7 +77,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
