@@ -1,0 +1,47 @@
+
+/* Remove default list styling */
+.student-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  /* Use Flexbox to display items in a single line & wraps content on smaller screens */
+  .student-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 1px 0; /* Adjust padding to bring items closer together */
+    margin: 5px 0; /* Adjust margin for more compact spacing */
+  }
+  
+  .student-item span, .student-item button {
+    flex: 1;
+    min-width: 80px; /* Adjust min-width to make elements closer */
+    padding: 5px; /* Adjust padding */
+  }
+  
+  .student-item button {
+    flex: 0 0 auto;
+  }
+
+  /* CSS to style the statistics section */
+  .statistics {
+    margin-bottom: 20px;
+  }
+  
+  .statistics p {
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .student-item {
+      flex-direction: column;
+    }
+  
+    .student-item span, .student-item button {
+      min-width: 100%;
+      padding: 5px 0; /* Adjust padding for mobile */
+    }
+  }
+  

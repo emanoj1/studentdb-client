@@ -1,38 +1,89 @@
+/* General styles */
 .App {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Side panel styles */
+.side-panel {
+  flex: 0 0 200px;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+
+.side-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-panel ul li {
+  margin-bottom: 1rem;
+}
+
+.side-panel ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 0.5rem;
+  background-color: #ddd;
+  border-radius: 4px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Content area styles */
+.content {
+  flex: 1;
+  padding: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Mobile navigation styles */
+.side-panel-mobile {
+  display: none; /* Hide mobile navigation by default */
+}
+
+@media (max-width: 768px) {
+  .side-panel {
+    display: none; /* Hide side panel on mobile devices */
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .side-panel-mobile {
+    display: flex; /* Show mobile navigation on small screens */
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    padding: 1rem;
+  }
+
+  .side-panel-mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-panel-mobile ul li {
+    margin-bottom: 0.5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
