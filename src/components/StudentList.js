@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import EditStudent from './EditStudent'; // Import the EditStudent component
 import './Dashboard.css';
 
 function StudentList() {
   const [students, setStudents] = useState([]);
+  const [editingStudent, setEditingStudent] = useState(null);
 
   useEffect(() => {
     const fetchStudents = async () => {
@@ -29,6 +31,10 @@ function StudentList() {
     }
   };
 
+  const handleEditClick = (student) => {
+    setEditingStudent(student);
+  };
+
   return (
     <div>
       <h1>Student List</h1>
@@ -43,10 +49,12 @@ function StudentList() {
             <span>{student.address}</span>
             <span>{student.dateOfEnrollment}</span>
             <span>{student.areaOfStudy}</span>
+            <button onClick={()=> handleEditClick(student)}>Edit</button>
             <button onClick={() => handleDelete(student._id)}>Delete</button>
           </li>
         ))}
       </ul>
+      {editingStudent && <EditStudent student={editingStudent} setEditingStudent={setEditingStudent} />}
     </div>
   );
 }
