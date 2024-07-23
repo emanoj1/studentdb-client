@@ -7,11 +7,26 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #333;
   padding: 1rem;
 }
 
-.main-nav a, .main-nav button {
+.main-nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links a, .nav-links button {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -25,12 +40,12 @@
   font-weight: bold;
 }
 
+/* Main container and side panel styles */
 .main-container {
   display: flex;
   flex: 1;
 }
 
-/* Side panel styles */
 .side-panel {
   flex: 0 0 200px;
   background-color: #f4f4f4;
@@ -93,6 +108,4 @@
     margin-bottom: 0.5rem;
   }
 }
-
-
 
