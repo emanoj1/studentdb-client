@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import EditStudent from './EditStudent'; // Import the EditStudent component
+import EditStudent from './EditStudent';
 import './Dashboard.css';
 
 // Utility function to format date
@@ -57,6 +57,8 @@ function StudentList() {
   return (
     <div>
       <h1>Student List</h1>
+      <h3>Table Format:
+      | Name | Date of Birth | Gender | Phone | Email | Address | Date of Enrolment | Area of Study | Actions |</h3>
       <ul className="student-list">
         {students.map(student => (
           <li key={student._id} className="student-item">
@@ -79,5 +81,3 @@ function StudentList() {
 }
 
 export default StudentList;
-
-
