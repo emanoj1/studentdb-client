@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import './Dashboard.css'; // Import the CSS file
+import './Dashboard.css';
 
 function Dashboard() {
   const [statistics, setStatistics] = useState({
