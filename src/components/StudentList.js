@@ -3,6 +3,15 @@ import axios from 'axios';
 import EditStudent from './EditStudent'; // Import the EditStudent component
 import './Dashboard.css';
 
+// Utility function to format date
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based in JS
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
 function StudentList() {
   const [students, setStudents] = useState([]);
   const [editingStudent, setEditingStudent] = useState(null);
@@ -52,12 +61,12 @@ function StudentList() {
         {students.map(student => (
           <li key={student._id} className="student-item">
             <span>{student.name}</span>
-            <span>{student.dateOfBirth}</span>
+            <span>{formatDate(student.dateOfBirth)}</span>
             <span>{student.gender}</span>
             <span>{student.phone}</span>
             <span>{student.email}</span>
             <span>{student.address}</span>
-            <span>{student.dateOfEnrollment}</span>
+            <span>{formatDate(student.dateOfEnrollment)}</span>
             <span>{student.areaOfStudy}</span>
             <button onClick={() => handleEditClick(student)}>Edit</button>
             <button onClick={() => handleDelete(student._id)}>Delete</button>
@@ -70,4 +79,5 @@ function StudentList() {
 }
 
 export default StudentList;
+
 
