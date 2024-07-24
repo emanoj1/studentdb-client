@@ -10,7 +10,12 @@ function StudentList() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/students`);
+        const token = localStorage.getItem('auth-token');
+        const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/students`, {
+          headers: {
+            'auth-token': token,
+          },
+        });
         setStudents(res.data);
       } catch (err) {
         console.error('Error fetching students', err);
@@ -22,7 +27,12 @@ function StudentList() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/students/${id}`);
+      const token = localStorage.getItem('auth-token');
+      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/students/${id}`, {
+        headers: {
+          'auth-token': token,
+        },
+      });
       setStudents(students.filter(student => student._id !== id));
       alert('Student deleted successfully!');
     } catch (err) {
@@ -49,7 +59,7 @@ function StudentList() {
             <span>{student.address}</span>
             <span>{student.dateOfEnrollment}</span>
             <span>{student.areaOfStudy}</span>
-            <button onClick={()=> handleEditClick(student)}>Edit</button>
+            <button onClick={() => handleEditClick(student)}>Edit</button>
             <button onClick={() => handleDelete(student._id)}>Delete</button>
           </li>
         ))}
@@ -60,3 +70,4 @@ function StudentList() {
 }
 
 export default StudentList;
+
