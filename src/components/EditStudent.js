@@ -2,7 +2,19 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function EditStudent({ student, setEditingStudent }) {
-  const [formData, setFormData] = useState({ ...student });
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based in JS
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
+  const [formData, setFormData] = useState({
+    ...student,
+    dateOfBirth: formatDate(student.dateOfBirth),
+    dateOfEnrollment: formatDate(student.dateOfEnrollment),
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -11,13 +23,15 @@ function EditStudent({ student, setEditingStudent }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const token = localStorage.getItem('auth-token');
       const config = {
         headers: {
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+          'auth-token': token,
+        },
       };
       const body = JSON.stringify(formData);
-      await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/students/${student._id}`, body, config);
+      await axios.put(`${process.env.REACT_APP_API_BASE_URL}/students/${student._id}`, body, config);
       alert('Student updated successfully!');
       setEditingStudent(null); // Close the edit form after successful update
     } catch (err) {
@@ -35,7 +49,7 @@ function EditStudent({ student, setEditingStudent }) {
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
         <div>
-          <label>Date of Birth (dd/mm/yyyy)</label>
+          <label>Date of Birth </label>
           <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} required />
         </div>
         <div>
@@ -55,7 +69,7 @@ function EditStudent({ student, setEditingStudent }) {
           <input type="text" name="address" value={formData.address} onChange={handleChange} required />
         </div>
         <div>
-          <label>Date of Enrollment (dd/mm/yyyy)</label>
+          <label>Date of Enrollment </label>
           <input type="date" name="dateOfEnrollment" value={formData.dateOfEnrollment} onChange={handleChange} required />
         </div>
         <div>
@@ -70,3 +84,6 @@ function EditStudent({ student, setEditingStudent }) {
 }
 
 export default EditStudent;
+
+
+
