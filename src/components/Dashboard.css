@@ -33,6 +33,37 @@
   .statistics p {
     margin: 5px 0;
   }
+
+/* Common button styles */
+.button {
+  padding: 10px 20px;
+  border-radius: 20px; /* Rounded edges */
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold; /* Bold text */
+  display: inline-block;
+  margin: 5px; /* Add some margin between buttons */
+}
+
+/* Edit button styles */
+.edit-btn {
+  background-color: #50c356; /* Green color */
+}
+
+.edit-btn:hover {
+  background-color: #218838; /* Slightly darker green on hover */
+}
+
+/* Delete button styles */
+.delete-btn {
+  background-color: #ff3333; /* Red color */
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* Slightly darker red on hover */
+}
   
   @media (max-width: 768px) {
     .student-item {

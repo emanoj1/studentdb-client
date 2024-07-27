@@ -71,8 +71,8 @@ function StudentList() {
             <span>{student.address}</span>
             <span>{formatDate(student.dateOfEnrollment)}</span>
             <span>{student.areaOfStudy}</span>
-            <button onClick={() => handleEditClick(student)}>Edit</button>
-            <button onClick={() => handleDelete(student._id)}>Delete</button>
+            <button onClick={() => handleEditClick(student)} className="button edit-btn">Edit</button>
+            <button onClick={() => handleDelete(student._id)} className="button delete-btn">Delete</button>
           </li>
         ))}
       </ul>
