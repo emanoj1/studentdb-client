@@ -2,14 +2,14 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import './Dashboard.css'; // Import the CSS file
+import './Dashboard.css';
 
 function Dashboard() {
   const [statistics, setStatistics] = useState({
     totalStudents: 0,
     totalInAreaOfStudy: 0,
     maleStudents: 0,
-    femaleStudents: 0
+    femaleStudents: 0,
   });
 
   const computeStatistics = useCallback((students) => {
@@ -22,14 +22,19 @@ function Dashboard() {
       totalStudents,
       totalInAreaOfStudy,
       maleStudents,
-      femaleStudents
+      femaleStudents,
     });
   }, []);
 
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/students`);
+        const token = localStorage.getItem('auth-token');
+        const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/students`, {
+          headers: {
+            'auth-token': token,
+          },
+        });
         computeStatistics(res.data);
       } catch (err) {
         console.error('Error fetching students', err);
@@ -53,3 +58,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
