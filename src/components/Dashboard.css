@@ -1,78 +1,8 @@
-
-/* Remove default list styling */
-.student-list {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  /* Use Flexbox to display items in a single line & wraps content on smaller screens */
-  .student-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    padding: 1px 0; /* Adjust padding to bring items closer together */
-    margin: 5px 0; /* Adjust margin for more compact spacing */
-  }
-  
-  .student-item span, .student-item button {
-    flex: 1;
-    min-width: 80px; /* Adjust min-width to make elements closer */
-    padding: 5px; /* Adjust padding */
-  }
-  
-  .student-item button {
-    flex: 0 0 auto;
-  }
-
-  /* CSS to style the statistics section */
-  .statistics {
-    margin-bottom: 20px;
-  }
-  
-  .statistics p {
-    margin: 5px 0;
-  }
-
-/* Common button styles */
-.button {
-  padding: 10px 20px;
-  border-radius: 20px; /* Rounded edges */
-  color: white;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  font-weight: bold; /* Bold text */
-  display: inline-block;
-  margin: 5px; /* Add some margin between buttons */
+/* CSS to style the statistics on main Dashboard page */
+.statistics {
+  margin-bottom: 20px;
 }
 
-/* Edit button styles */
-.edit-btn {
-  background-color: #50c356; /* Green color */
+.statistics p {
+  margin: 5px 0;
 }
-
-.edit-btn:hover {
-  background-color: #218838; /* Slightly darker green on hover */
-}
-
-/* Delete button styles */
-.delete-btn {
-  background-color: #ff3333; /* Red color */
-}
-
-.delete-btn:hover {
-  background-color: #c82333; /* Slightly darker red on hover */
-}
-  
-  @media (max-width: 768px) {
-    .student-item {
-      flex-direction: column;
-    }
-  
-    .student-item span, .student-item button {
-      min-width: 100%;
-      padding: 5px 0; /* Adjust padding for mobile */
-    }
-  }
-  
