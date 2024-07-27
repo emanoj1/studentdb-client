@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/studentDB-logo.png';
+import logo from '../assets/images/studentDB-logo-noBG.png';
 import './NavBar.css'; 
 
 function NavBar({ isLoggedIn, handleLogout }) {
