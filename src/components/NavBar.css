@@ -41,6 +41,19 @@
   .navbar-links button:hover, .navbar-links a:hover {
     text-decoration: underline;
   }
+
+  /* Special styles for Register and Logout buttons */
+.navbar-links .register-btn, .navbar-links .logout-btn {
+  background-color: #FFD700; /* Example color for the button */
+  padding: 10px 20px;
+  border-radius: 20px; /* Rounded edges */
+  color: #333; /* Text color */
+  font-weight: bold; /* Bold text */
+}
+
+.navbar-links .register-btn:hover, .navbar-links .logout-btn:hover {
+  background-color: #FFC107; /* Slightly darker color on hover */
+}
   
   /* Hamburger menu styles */
   .navbar-toggle {
