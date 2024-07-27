@@ -57,8 +57,9 @@ function StudentList() {
   return (
     <div>
       <h1>Student List</h1>
-      <h3>Table Format:
-      | Name | Date of Birth | Gender | Phone | Email | Address | Date of Enrolment | Area of Study | Actions |</h3>
+      <h2>Below is the list of student records in your database. You may Edit & Delete your students here.</h2>
+      <h4>Table Format:
+      | Name | Date of Birth (year-month-date) | Gender | Phone | Email | Address | Date of Enrolment (year-month-date) | Area of Study | Actions |</h4>
       <ul className="student-list">
         {students.map(student => (
           <li key={student._id} className="student-item">
