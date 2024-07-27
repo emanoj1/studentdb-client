@@ -21,32 +21,34 @@ const App = () => {
     navigate('/');
   };
 
-  const handleLogoClick = () => {
-    if (authToken) {
-      navigate('/dashboard');
-    } else {
-      navigate('/');
-    }
-  };
-
   return (
     <div className="App">
       <nav className="main-nav">
-        <span onClick={handleLogoClick} className="logo">Logo</span>
-        <div className="nav-links">
-          {authToken ? (
+        {authToken ? (
+          <>
+            <Link to="/dashboard" className="logo">Logo</Link>
             <button onClick={handleLogout}>Logout</button>
-          ) : (
-            <>
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/contact">Contact</Link>
-              <Link to="/login">Login</Link>
-              <Link to="/register">Register</Link>
-            </>
-          )}
-        </div>
+          </>
+        ) : (
+          <>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+          </>
+        )}
       </nav>
+      <div className="side-panel-mobile">
+        {authToken && (
+          <ul>
+            <li><Link to="/dashboard">Dashboard</Link></li>
+            <li><Link to="/student-list">Student List</Link></li>
+            <li><Link to="/add-student">Add Students</Link></li>
+            <li><Link to="/admin-settings">Admin Settings</Link></li>
+          </ul>
+        )}
+      </div>
       <div className="main-container">
         {authToken && (
           <div className="side-panel">
@@ -77,6 +79,3 @@ const App = () => {
 };
 
 export default App;
-
-
-

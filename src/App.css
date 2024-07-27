@@ -35,6 +35,11 @@
   cursor: pointer;
 }
 
+.main-nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /* Main container and side panel styles */
 .main-container {
   display: flex;
