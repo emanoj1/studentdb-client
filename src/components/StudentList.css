@@ -1,0 +1,137 @@
+/* Remove default list styling */
+.student-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Use Flexbox to display items in a single line & wraps content on smaller screens */
+  .student-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 1px 0; /* Adjust padding to bring items closer together */
+    margin: 5px 0; /* Adjust margin for more compact spacing */
+  }
+  
+  .student-item span, .student-item button {
+    flex: 1;
+    min-width: 80px; /* Adjust min-width to make elements closer */
+    padding: 5px; /* Adjust padding */
+  }
+  
+  .student-item button {
+    flex: 0 0 auto;
+  }
+  
+  /* CSS to style the statistics section */
+  .statistics {
+    margin-bottom: 20px;
+  }
+  
+  .statistics p {
+    margin: 5px 0;
+  }
+  
+  /* Common button styles */
+  .button {
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded edges */
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold; /* Bold text */
+    display: inline-block;
+    margin: 5px; /* Add some margin between buttons */
+  }
+  
+  /* Edit button styles */
+  .edit-btn {
+    background-color: #50c356; /* Green color */
+  }
+  
+  .edit-btn:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+  }
+  
+  /* Delete button styles */
+  .delete-btn {
+    background-color: #ff3333; /* Red color */
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333; /* Slightly darker red on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .student-item {
+      flex-direction: column;
+    }
+  
+    .student-item span, .student-item button {
+      min-width: 100%;
+      padding: 5px 0; /* Adjust padding for mobile */
+    }
+  }
+  
+  /* Grid styles for student list */
+  .student-list-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .student-list-header {
+    display: contents; /* Make header items part of the grid */
+    font-weight: bold;
+    background-color: #f4f4f4;
+  }
+  
+  .student-item {
+    display: contents; /* Make student items part of the grid */
+  }
+  
+  .student-item div, .student-list-header div {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .student-list-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .student-list-header, .student-item {
+      display: block;
+    }
+  
+    .student-list-header div, .student-item div {
+      display: block;
+      border-bottom: none;
+    }
+  
+    .student-list-header div {
+      font-weight: bold;
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  
+    .student-item div {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .actions {
+      margin-bottom: 10px;
+    }
+  }
+  
