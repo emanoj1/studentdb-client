@@ -10,6 +10,7 @@ import StudentList from './components/StudentList';
 import AddStudent from './components/AddStudent';
 import AdminSettings from './components/AdminSettings';
 import PrivateRoute from './components/PrivateRoute';
+import NavBar from './components/NavBar'; 
 import './App.css';
 
 const App = () => {
@@ -23,22 +24,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <nav className="main-nav">
-        {authToken ? (
-          <>
-            <Link to="/dashboard" className="logo">Logo</Link>
-            <button onClick={handleLogout}>Logout</button>
-          </>
-        ) : (
-          <>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-          </>
-        )}
-      </nav>
+      <NavBar isLoggedIn={!!authToken} handleLogout={handleLogout} /> {/* Use NavBar component */}
       <div className="side-panel-mobile">
         {authToken && (
           <ul>
