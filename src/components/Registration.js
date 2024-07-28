@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './Registration.css'; // Import the CSS file
-import registrationImage from '../assets/images/registration-image-drawkit.png'; // Import the image
+import './Registration.css';
+import registrationImage from '../assets/images/registration-image-drawkit.png'; // Import image for rego page
 
 function Registration() {
   const [formData, setFormData] = useState({
@@ -17,6 +17,7 @@ function Registration() {
 
   const { name, email, password, instituteName, instituteRegistrationNumber } = formData;
   const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState('');
   const navigate = useNavigate(); // Hook for navigation
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,8 +33,10 @@ function Registration() {
       const body = JSON.stringify({ name, email, password, instituteName, instituteRegistrationNumber });
       const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/user/register`, body, config);
       console.log('Registered Successfully', res.data);
-      alert('Registration successful');
-      navigate('/login');
+      setSuccessMessage('Registration successful! Redirecting to login page...');
+      setTimeout(() => {
+        navigate('/login');
+      }, 3000); // Redirect after 3 seconds
     } catch (error) {
       console.error('Error during registration', error.response.data);
       setError(error.response?.data?.message || 'An error occurred during registration');
@@ -46,11 +49,12 @@ function Registration() {
         <img src={registrationImage} alt="Registration Illustration" />
       </div>
       <div className="registration-form">
-        <h2>Register Institution Admin</h2>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <h2>Great decision! Register your institution and start using studentDB!</h2>
+        {error && <p className="error-message">{error}</p>}
+        {successMessage && <p className="success-message">{successMessage}</p>}
         <form onSubmit={onSubmit}>
           <div>
-            <label>Name</label>
+            <label>Your Name (The Institute admin)</label>
             <input
               type="text"
               name="name"
@@ -60,7 +64,7 @@ function Registration() {
             />
           </div>
           <div>
-            <label>Email</label>
+            <label>Your work Email</label>
             <input
               type="email"
               name="email"
@@ -80,7 +84,7 @@ function Registration() {
             />
           </div>
           <div>
-            <label>Institute Name</label>
+            <label>Your institute Name</label>
             <input
               type="text"
               name="instituteName"
@@ -105,5 +109,6 @@ function Registration() {
     </div>
   );
 }
+
 
 export default Registration;

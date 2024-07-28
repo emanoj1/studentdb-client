@@ -2,65 +2,88 @@
 
 .registration-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 2rem;
   }
   
   .registration-form {
     flex: 1;
-    max-width: 500px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 2rem;
   }
   
   .registration-form h2 {
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 1.5rem;
   }
   
-  .registration-form form div {
-    margin-bottom: 15px;
+  .registration-form div {
+    margin-bottom: 1rem;
   }
   
   .registration-form label {
     display: block;
-    margin-bottom: 5px;
-    color: #555;
+    margin-bottom: 0.5rem;
   }
   
   .registration-form input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
   }
   
   .registration-form button {
-    width: 100%;
-    padding: 10px;
+    padding: 0.75rem 1.5rem;
     background-color: #82E1DF;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
   }
   
   .registration-form button:hover {
-    background-color: #70cfcf;
+    background-color: #50b3b3;
   }
   
   .registration-image {
     flex: 1;
-    max-width: 500px;
-    padding: 20px;
+    margin-right: 2rem;
   }
   
   .registration-image img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
   }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .success-message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .registration-container {
+      flex-direction: column-reverse;
+    }
+  
+    .registration-image {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  
+    .registration-form {
+      margin-left: 0;
+    }
+  }
+  
   
