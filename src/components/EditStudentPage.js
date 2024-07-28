@@ -4,7 +4,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import './StudentList.css';
+import './EditStudentPage.css';
 import './Messages.css';
+
 
 function EditStudentPage() {
   const { id } = useParams();
@@ -69,39 +71,39 @@ function EditStudentPage() {
   };
 
   return (
-    <div>
+    <div className="edit-student-page">
       <h1>Edit Student</h1>
       {message && <p className="success-message">{message}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form onSubmit={handleSubmit} className="edit-student-form">
+        <div className="form-group">
           <label>Name</label>
           <input type="text" name="name" value={formData.name || ''} onChange={handleChange} required />
         </div>
-        <div>
+        <div className="form-group">
           <label>Date of Birth (yyyy-mm-dd)</label>
           <input type="date" name="dateOfBirth" value={formData.dateOfBirth || ''} onChange={handleChange} required />
         </div>
-        <div>
+        <div className="form-group">
           <label>Gender</label>
           <input type="text" name="gender" value={formData.gender || ''} onChange={handleChange} required />
         </div>
-        <div>
+        <div className="form-group">
           <label>Phone</label>
           <input type="text" name="phone" value={formData.phone || ''} onChange={handleChange} />
         </div>
-        <div>
+        <div className="form-group">
           <label>Email</label>
           <input type="email" name="email" value={formData.email || ''} onChange={handleChange} required />
         </div>
-        <div>
+        <div className="form-group">
           <label>Address</label>
           <input type="text" name="address" value={formData.address || ''} onChange={handleChange} required />
         </div>
-        <div>
+        <div className="form-group">
           <label>Date of Enrollment (yyyy-mm-dd)</label>
           <input type="date" name="dateOfEnrollment" value={formData.dateOfEnrollment || ''} onChange={handleChange} required />
         </div>
-        <div>
+        <div className="form-group">
           <label>Area of Study</label>
           <input type="text" name="areaOfStudy" value={formData.areaOfStudy || ''} onChange={handleChange} required />
         </div>
