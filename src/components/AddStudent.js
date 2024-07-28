@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './EditStudentPage.css'; // Reusing the CSS file for styling boxes & fields
 
 function AddStudent() {
   const [formData, setFormData] = useState({
@@ -51,44 +52,44 @@ function AddStudent() {
   };
 
   return (
-    <div>
-      <h2>Add Student</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
+    <div className="edit-student-page">
+      <h1>Add Student</h1>
+      {message && <p className="success-message">{message}</p>}
+      <form onSubmit={handleSubmit} className="edit-student-form">
+        <div className="form-group">
+          <label>Name</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
-        <div>
-          <label>Date of Birth:</label>
+        <div className="form-group">
+          <label>Date of Birth (yyyy-mm-dd)</label>
           <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} required />
         </div>
-        <div>
-          <label>Gender:</label>
+        <div className="form-group">
+          <label>Gender</label>
           <input type="text" name="gender" value={formData.gender} onChange={handleChange} required />
         </div>
-        <div>
-          <label>Phone:</label>
+        <div className="form-group">
+          <label>Phone</label>
           <input type="text" name="phone" value={formData.phone} onChange={handleChange} />
         </div>
-        <div>
-          <label>Email:</label>
+        <div className="form-group">
+          <label>Email</label>
           <input type="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
-        <div>
-          <label>Address:</label>
+        <div className="form-group">
+          <label>Address</label>
           <input type="text" name="address" value={formData.address} onChange={handleChange} required />
         </div>
-        <div>
-          <label>Date of Enrollment:</label>
+        <div className="form-group">
+          <label>Date of Enrollment (yyyy-mm-dd)</label>
           <input type="date" name="dateOfEnrollment" value={formData.dateOfEnrollment} onChange={handleChange} required />
         </div>
-        <div>
-          <label>Area of Study:</label>
+        <div className="form-group">
+          <label>Area of Study</label>
           <input type="text" name="areaOfStudy" value={formData.areaOfStudy} onChange={handleChange} required />
         </div>
-        <button type="submit">Add Student</button>
+        <button type="submit" className="button edit-btn">Add Student</button>
       </form>
-      {message && <p>{message}</p>}
     </div>
   );
 }
