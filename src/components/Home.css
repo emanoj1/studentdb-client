@@ -113,6 +113,13 @@
     color: gold;
     margin-top: 5px;
   }
+
+  /* Section headings */
+  .section-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
   
   /* Footer section */
   .footer {

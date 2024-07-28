@@ -34,6 +34,7 @@ function Home() {
       </div>
 
       {/* Features Section */}
+      <h2 className="section-heading">Discover how StudentDB can enhance your institution's efficiency and streamline your operations. </h2>
       <div className="features-section">
         <div className="feature-box">
           <div className="feature-icon">
@@ -65,6 +66,7 @@ function Home() {
       </div>
 
       {/* Testimonials Section */}
+      <h2 className="section-heading">See why institutions around the world trust StudentDB for their student management needs.</h2>
       <div className="testimonials-section">
         <div className="testimonial-box">
           <div className="testimonial-image">
