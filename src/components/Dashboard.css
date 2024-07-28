@@ -6,3 +6,24 @@
 .statistics p {
   margin: 5px 0;
 }
+
+/* CSS for admin info display on Dashboard page */
+
+.admin-info {
+  margin-bottom: 20px;
+}
+
+.admin-info p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.statistics {
+  margin-top: 20px;
+}
+
+.statistics p {
+  font-size: 16px;
+  margin: 5px 0;
+}
