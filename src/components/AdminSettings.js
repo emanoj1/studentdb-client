@@ -1,34 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import './EditStudentPage.css'; // Reuse the CSS file for styling
 
 function AdminSettings() {
+  const navigate = useNavigate();
+  const [currentDetails, setCurrentDetails] = useState({});
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    password: '',
     instituteName: '',
-    instituteRegistrationNumber: '',
-    password: ''
+    instituteRegistrationNumber: ''
   });
+  const [message, setMessage] = useState('');
 
-  // Fetch admin data on component mount
   useEffect(() => {
     const fetchAdminData = async () => {
       try {
         const token = localStorage.getItem('auth-token');
         const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/institutions/profile`, {
           headers: {
-            'auth-token': token
-          }
+            'auth-token': token,
+          },
         });
+        setCurrentDetails(res.data);
         setFormData({
           name: res.data.name,
           email: res.data.email,
           instituteName: res.data.instituteName,
           instituteRegistrationNumber: res.data.instituteRegistrationNumber,
-          password: '' // Leave password empty initially
         });
       } catch (err) {
-        console.error('Error fetching admin data', err);
+        console.error('Error fetching admin data:', err.response ? err.response.data : err.message);
+        setMessage('Error fetching admin data. Please try again.');
       }
     };
 
@@ -43,50 +48,73 @@ function AdminSettings() {
     e.preventDefault();
     try {
       const token = localStorage.getItem('auth-token');
-      await axios.put(`${process.env.REACT_APP_API_BASE_URL}/institutions/profile`, formData, {
+      const config = {
         headers: {
+          'Content-Type': 'application/json',
           'auth-token': token,
-          'Content-Type': 'application/json'
-        }
-      });
-      alert('Profile updated successfully!');
+        },
+      };
+      const body = JSON.stringify(formData);
+      await axios.put(`${process.env.REACT_APP_API_BASE_URL}/institutions/profile`, body, config);
+      setMessage('Profile updated successfully!');
+      setTimeout(() => setMessage(''), 3000);
+
+      if (formData.password) {
+        localStorage.removeItem('auth-token');
+        navigate('/login');
+      }
     } catch (err) {
-      console.error('Error updating profile', err);
-      alert('Failed to update profile');
+      console.error('Failed to update profile:', err.response ? err.response.data : err.message);
+      setMessage('Failed to update profile');
     }
   };
 
   return (
-    <div>
-      <h2>Admin Settings</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className="edit-student-page">
+      <h1>Admin Settings</h1>
+      {message && <p className="success-message">{message}</p>}
+      <div className="current-details">
+        <h2>Current Details</h2>
+        <p><strong>Name:</strong> {currentDetails.name}</p>
+        <p><strong>Email:</strong> {currentDetails.email}</p>
+        <p><strong>Institute Name:</strong> {currentDetails.instituteName}</p>
+        <p><strong>Institute Registration Number:</strong> {currentDetails.instituteRegistrationNumber}</p>
+      </div>
+      <form onSubmit={handleSubmit} className="edit-student-form">
+        <div className="form-group">
           <label>Name</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
-        <div>
+        <div className="form-group">
           <label>Email</label>
           <input type="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
-        <div>
+        <div className="form-group">
+          <label>Password</label>
+          <input type="password" name="password" value={formData.password} onChange={handleChange} />
+        </div>
+        <div className="form-group">
           <label>Institute Name</label>
           <input type="text" name="instituteName" value={formData.instituteName} onChange={handleChange} required />
         </div>
-        <div>
+        <div className="form-group">
           <label>Institute Registration Number</label>
           <input type="text" name="instituteRegistrationNumber" value={formData.instituteRegistrationNumber} onChange={handleChange} required />
         </div>
-        <div>
-          <label>Update Password</label>
-          <input type="password" name="password" value={formData.password} onChange={handleChange} />
-        </div>
-        <button type="submit">Update Profile</button>
+        <button type="submit" className="button edit-btn">Update Profile</button>
       </form>
     </div>
   );
 }
 
 export default AdminSettings;
+
+
+
+
+
+
+
 
 
 
