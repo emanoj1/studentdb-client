@@ -1,0 +1,9 @@
+/* Style for update messages on screen in logged-in state */
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  

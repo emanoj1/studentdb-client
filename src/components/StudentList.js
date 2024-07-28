@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import EditStudent from './EditStudent';
 import './StudentList.css';
 
 // Utility function to format date
@@ -14,7 +14,7 @@ const formatDate = (dateString) => {
 
 function StudentList() {
   const [students, setStudents] = useState([]);
-  const [editingStudent, setEditingStudent] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchStudents = async () => {
@@ -33,26 +33,6 @@ function StudentList() {
 
     fetchStudents();
   }, []);
-
-  const handleDelete = async (id) => {
-    try {
-      const token = localStorage.getItem('auth-token');
-      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/students/${id}`, {
-        headers: {
-          'auth-token': token,
-        },
-      });
-      setStudents(students.filter(student => student._id !== id));
-      alert('Student deleted successfully!');
-    } catch (err) {
-      console.error('Failed to delete student', err);
-      alert('Failed to delete student');
-    }
-  };
-
-  const handleEditClick = (student) => {
-    setEditingStudent(student);
-  };
 
   return (
     <div>
@@ -80,16 +60,16 @@ function StudentList() {
             <div>{formatDate(student.dateOfEnrollment)}</div>
             <div>{student.areaOfStudy}</div>
             <div className="actions">
-              <button onClick={() => handleEditClick(student)} className="button edit-btn">Edit</button>
-              <button onClick={() => handleDelete(student._id)} className="button delete-btn">Delete</button>
+              <button onClick={() => navigate(`/edit-student/${student._id}`)} className="button edit-btn">Edit</button>
+              <button onClick={() => navigate(`/delete-student/${student._id}`)} className="button delete-btn">Delete</button>
             </div>
           </div>
         ))}
       </div>
-      {editingStudent && <EditStudent student={editingStudent} setEditingStudent={setEditingStudent} />}
     </div>
   );
 }
 
 export default StudentList;
+
 

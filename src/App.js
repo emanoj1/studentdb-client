@@ -9,6 +9,8 @@ import Dashboard from './components/Dashboard';
 import StudentList from './components/StudentList';
 import AddStudent from './components/AddStudent';
 import AdminSettings from './components/AdminSettings';
+import EditStudentPage from './components/EditStudentPage'; 
+import DeleteStudentPage from './components/DeleteStudentPage';
 import PrivateRoute from './components/PrivateRoute';
 import NavBar from './components/NavBar'; 
 import './App.css';
@@ -57,6 +59,8 @@ const App = () => {
             <Route path="/student-list" element={<PrivateRoute><StudentList /></PrivateRoute>} />
             <Route path="/add-student" element={<PrivateRoute><AddStudent /></PrivateRoute>} />
             <Route path="/admin-settings" element={<PrivateRoute><AdminSettings /></PrivateRoute>} />
+            <Route path="/edit-student/:id" element={<PrivateRoute><EditStudentPage /></PrivateRoute>} />
+            <Route path="/delete-student/:id" element={<PrivateRoute><DeleteStudentPage /></PrivateRoute>} />
           </Routes>
         </div>
       </div>
