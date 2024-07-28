@@ -7,7 +7,6 @@ import './Dashboard.css';
 function Dashboard() {
   const [statistics, setStatistics] = useState({
     totalStudents: 0,
-    totalInAreaOfStudy: 0,
     maleStudents: 0,
     femaleStudents: 0,
   });
@@ -16,11 +15,9 @@ function Dashboard() {
     const totalStudents = students.length;
     const maleStudents = students.filter(student => student.gender === 'Male').length;
     const femaleStudents = students.filter(student => student.gender === 'Female').length;
-    const totalInAreaOfStudy = students.filter(student => student.areaOfStudy === 'Computer Science').length; // Example area of study
 
     setStatistics({
       totalStudents,
-      totalInAreaOfStudy,
       maleStudents,
       femaleStudents,
     });
@@ -49,7 +46,6 @@ function Dashboard() {
       <h1>Dashboard</h1>
       <div className="statistics">
         <p>Total Students: {statistics.totalStudents}</p>
-        <p>Total Students in Area of Study: {statistics.totalInAreaOfStudy}</p>
         <p>Male Students: {statistics.maleStudents}</p>
         <p>Female Students: {statistics.femaleStudents}</p>
       </div>
