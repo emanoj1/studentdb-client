@@ -1,0 +1,149 @@
+/* General styles for the homepage */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+  .hero-section .hero-image img {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .hero-content {
+    max-width: 45%;
+    padding: 20px; /* Added padding for better spacing */
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    margin-bottom: 20px;
+  }
+  
+  .hero-content .register-button {
+    padding: 10px 20px;
+    background-color: #50c356; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Rounded edges */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold; /* Bold text */
+  }
+  
+  .hero-content .register-button:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+  }
+  
+  /* Features section */
+  .features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+  .feature-box {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  .feature-box img {
+    max-width: 50px;
+    margin-right: 20px;
+  }
+  
+  .feature-box p {
+    margin: 0;
+  }
+  
+  /* Testimonials section */
+  .testimonials-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+  .testimonial-box {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  .testimonial-image img {
+    max-width: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .testimonial-content p {
+    margin: 0;
+  }
+  
+  .testimonial-content .stars {
+    color: gold;
+    margin-top: 5px;
+  }
+  
+  /* Footer section */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-section img {
+      max-width: 100%;
+      margin: 0 0 20px 0;
+    }
+  
+    .hero-content {
+      max-width: 100%;
+    }
+  
+    .features-section, .testimonials-section {
+      flex-direction: column;
+    }
+  
+    .feature-box, .testimonial-box {
+      width: 100%;
+    }
+  }
+  
