@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
+import loginImage from '../assets/images/login-image-drawkit.svg';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -28,25 +30,41 @@ function Login() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleLogin}>
-        <h1>Login</h1>
+    <div className="login-container">
+      <div className="login-form">
+        <h2>Login</h2>
         {error && <p style={{ color: 'red' }}>{error}</p>}
-        <div>
-          <label>Email</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </div>
-        <div>
-          <label>Password</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+        <form onSubmit={handleLogin}>
+          <div>
+            <label>Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label>Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <div className="login-image">
+        <img src={loginImage} alt="Login Illustration" />
+      </div>
     </div>
   );
 }
 
 export default Login;
+
 
 
 
