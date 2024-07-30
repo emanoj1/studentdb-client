@@ -20,15 +20,15 @@ function Home() {
           <img src={heroimage} alt="Hero" />
         </div>
         <div className="hero-content">
-          <h1>Welcome to StudentDB</h1>
-          <h2>Your Ultimate Student Management System</h2>
+          <h1>Welcome to StudentDB!</h1>
+          <h2>Your Ultimate Online Student Management System.</h2>
           <p>
             StudentDB helps educational institutions manage their student data
             efficiently and effectively. Join us today and streamline your
             student management process.
           </p>
           <Link to="/register" className="button register-button">
-            Register Now
+            Register Now!
           </Link>
         </div>
       </div>
