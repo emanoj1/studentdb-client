@@ -120,6 +120,19 @@
     margin-bottom: 20px;
     text-align: center;
   }
+
+  .section-heading {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .section-heading .highlight {
+    background-color: yellow;
+    color: black;
+    padding: 0 5px; /* padding to look like a highlighter effect */
+    border-radius: 5px; /* some rounding to the edges */
+  }
+  
   
   /* Footer section */
   .footer {
