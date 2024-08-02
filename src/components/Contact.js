@@ -1,7 +1,7 @@
 // This is the Contact page using the Tally.so widget
 
 import React, { useEffect } from 'react';
-import './Contact.css';
+import '../styles/Contact.css';
 
 function Contact() {
   useEffect(() => {

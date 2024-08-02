@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './StudentList.css';
+import '../styles/StudentList.css';
 
 // Utility function to format date
 const formatDate = (dateString) => {

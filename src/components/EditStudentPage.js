@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-import './StudentList.css';
-import './EditStudentPage.css';
-import './Messages.css';
+import '../styles/StudentList.css';
+import '../styles/EditStudentPage.css';
+import '../styles/Messages.css';
 
 
 function EditStudentPage() {

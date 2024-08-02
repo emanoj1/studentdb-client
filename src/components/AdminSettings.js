@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './EditStudentPage.css'; // Reuse the CSS file for styling
+import '../styles/EditStudentPage.css'; // Reuse the CSS file for styling
 
 function AdminSettings() {
   const navigate = useNavigate();

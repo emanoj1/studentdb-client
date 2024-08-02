@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './EditStudentPage.css'; // Reusing the CSS file for styling boxes & fields
+import '../styles/EditStudentPage.css'; // Reusing the CSS file for styling boxes & fields
 
 function AddStudent() {
   const [formData, setFormData] = useState({

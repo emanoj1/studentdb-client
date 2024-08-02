@@ -1,7 +1,7 @@
 // This component provides information about the student management system, such as its purpose and the team behind it
 
 import React from 'react';
-import './About.css';
+import '../styles/About.css';
 import Footer from './Footer';
 import heroaboutimage from '../assets/images/about-page-hero-image.png';
 import team1 from '../assets/images/manoj-profile-photo.png';

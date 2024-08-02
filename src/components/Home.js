@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import '../styles/Home.css';
 import review1 from '../assets/images/review-1.png';
 import review2 from '../assets/images/review-2.png';
 import review3 from '../assets/images/review-3.png';
