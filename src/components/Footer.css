@@ -1,0 +1,19 @@
+.footer-wrapper {
+    background-color: #333;
+    width: 100%;
+    padding: 0 5px; /* Add padding to create gaps on the sides */
+    box-sizing: border-box;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 1px 0; /* Adjust padding to control thickness */
+  }
+  
+  
+  
+  
+  
