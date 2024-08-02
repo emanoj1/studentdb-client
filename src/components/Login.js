@@ -60,12 +60,8 @@ function Login() {
       <div className="login-image">
         <img src={loginImage} alt="Login Illustration" />
       </div>
-    </div>
+    </div>    
   );
 }
 
 export default Login;
-
-
-
-
