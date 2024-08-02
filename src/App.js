@@ -5,6 +5,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Login from './components/Login';
 import Registration from './components/Registration';
+import ForgotPassword from './components/ForgotPassword';
 import Dashboard from './components/Dashboard';
 import StudentList from './components/StudentList';
 import AddStudent from './components/AddStudent';
@@ -55,6 +56,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Registration />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
             <Route path="/student-list" element={<PrivateRoute><StudentList /></PrivateRoute>} />
             <Route path="/add-student" element={<PrivateRoute><AddStudent /></PrivateRoute>} />

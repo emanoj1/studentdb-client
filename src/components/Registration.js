@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Registration.css';
-import registrationImage from '../assets/images/registration-image-drawkit.png'; // Import image for rego page
+import registrationImage from '../assets/images/registration-image-drawkit.png';
 
 function Registration() {
   const [formData, setFormData] = useState({
@@ -12,10 +12,13 @@ function Registration() {
     email: '',
     password: '',
     instituteName: '',
-    instituteRegistrationNumber: ''
+    instituteRegistrationNumber: '',
+    securityAnswer1: '',
+    securityAnswer2: '',
+    securityAnswer3: ''
   });
 
-  const { name, email, password, instituteName, instituteRegistrationNumber } = formData;
+  const { name, email, password, instituteName, instituteRegistrationNumber, securityAnswer1, securityAnswer2, securityAnswer3 } = formData;
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState('');
   const navigate = useNavigate(); // Hook for navigation
@@ -30,7 +33,7 @@ function Registration() {
           'Content-Type': 'application/json'
         }
       };
-      const body = JSON.stringify({ name, email, password, instituteName, instituteRegistrationNumber });
+      const body = JSON.stringify({ name, email, password, instituteName, instituteRegistrationNumber, securityAnswer1, securityAnswer2, securityAnswer3 });
       const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/user/register`, body, config);
       console.log('Registered Successfully', res.data);
       setSuccessMessage('Registration successful! Redirecting to login page...');
@@ -102,6 +105,20 @@ function Registration() {
               onChange={onChange}
               required
             />
+          </div>
+          <h3>Security questions for Password Reset when required.</h3>
+          <h4>NOTE: Answers are case-senstive! Remember or note them down (as it is) for later use.</h4>
+          <div>
+            <label>What is the model of your first car?</label>
+            <input type="text" name="securityAnswer1" value={securityAnswer1} onChange={onChange} required />
+          </div>
+          <div>
+            <label>What was the first concert you attended?</label>
+            <input type="text" name="securityAnswer2" value={securityAnswer2} onChange={onChange} required />
+          </div>
+          <div>
+            <label>What is the postcode of your first ever home you lived in?</label>
+            <input type="text" name="securityAnswer3" value={securityAnswer3} onChange={onChange} required />
           </div>
           <button type="submit">Register</button>
         </form>
