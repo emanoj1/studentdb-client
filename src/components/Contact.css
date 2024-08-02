@@ -1,0 +1,21 @@
+/* Styling for the Contact page */
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contact-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tally-form {
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+  }
+  
+  
