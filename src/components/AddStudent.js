@@ -61,11 +61,11 @@ function AddStudent() {
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Date of Birth (yyyy-mm-dd)</label>
+          <label>Date of Birth </label>
           <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Gender</label>
+          <label>Gender (Male/Female)</label>
           <input type="text" name="gender" value={formData.gender} onChange={handleChange} required />
         </div>
         <div className="form-group">
@@ -81,7 +81,7 @@ function AddStudent() {
           <input type="text" name="address" value={formData.address} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Date of Enrollment (yyyy-mm-dd)</label>
+          <label>Date of Enrollment </label>
           <input type="date" name="dateOfEnrollment" value={formData.dateOfEnrollment} onChange={handleChange} required />
         </div>
         <div className="form-group">
