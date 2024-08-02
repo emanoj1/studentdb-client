@@ -10,6 +10,8 @@ import icon1 from '../assets/images/data-mgt-icon.png';
 import icon2 from '../assets/images/user-friendly-icon.png';
 import icon3 from '../assets/images/secure-icon.png';
 import heroimage from '../assets/images/hero-image-homepage.png';
+import studentListImage from '../assets/images/student-list-display-studentdb.png';
+import addStudentImage from '../assets/images/add-student-display-studentdb.png';
 
 function Home() {
   return (
@@ -65,6 +67,34 @@ function Home() {
         </div>
       </div>
 
+
+      {/* Student List image Section */}
+      <div className="image-section">
+        <h2>Our platform is designed to be intuitive and user-friendly, ensuring a seamless experience for all users.</h2>
+        <div className="image-container">
+          <img src={studentListImage} alt="Student List Display" />
+        </div>
+        <h3>Easily view your list of students and have tools to edit and delete content at your finger tips!</h3>
+      </div>
+
+      {/* Add Student image Section */}
+      <div className="image-section">
+        <h2>Your data entry will be an enjoyable experience!</h2>
+        <div className="image-container">
+          <img src={addStudentImage} alt="Add Student Display" />
+        </div>
+        <h3>A simple, quick and easy to use form for your student entry tasks! </h3>
+      </div>
+
+      {/* Video Walk-thru Section */}
+      <div className="video-section">
+        <h2 className="section-heading">Watch our video walkthrough</h2>
+        <div className="video-wrapper">
+          <iframe src="https://www.loom.com/embed/132bc7bb472a45489ce28d018b19100e?sid=b0519afa-c434-435e-81e6-1a9b83e524da" webkitAllowFullScreen mozAllowFullScreen allowFullScreen title="StudentDB Video Walkthrough"></iframe>
+        </div>
+        <h3>In the above video, we give you a quick overview of the website - the registration process, login steps, dashboard overview, and student management features. We hope this walkthrough will help you to familiarize yourself with the platform & get you started!</h3>
+      </div>
+
       {/* Testimonials Section */}
       <h2 className="section-heading">See why institutions around the world <span className="highlight">trust StudentDB </span><br/> for their student management needs.</h2>
       <div className="testimonials-section">
@@ -101,6 +131,15 @@ function Home() {
             <div className="stars">★★★★★</div>
           </div>
         </div>
+      </div>
+
+      {/* New Contact Section */}
+      <div className="contact-section">
+        <h2>Drop us a Line.</h2>
+        <p>Ask us a question, share ideas, or just say Hello.</p>
+        <Link to="/contact" className="button contact-button">
+          Contact Us
+        </Link>
       </div>
 
       {/* Footer */}
