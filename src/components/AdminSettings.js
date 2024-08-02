@@ -74,12 +74,13 @@ function AdminSettings() {
       <h1>Admin Settings</h1>
       {message && <p className="success-message">{message}</p>}
       <div className="current-details">
-        <h2>Current Details</h2>
+        <h3>Current Details on record:</h3>
         <p><strong>Name:</strong> {currentDetails.name}</p>
         <p><strong>Email:</strong> {currentDetails.email}</p>
         <p><strong>Institute Name:</strong> {currentDetails.instituteName}</p>
         <p><strong>Institute Registration Number:</strong> {currentDetails.instituteRegistrationNumber}</p>
       </div>
+      <h3>Update Details below:</h3>
       <form onSubmit={handleSubmit} className="edit-student-form">
         <div className="form-group">
           <label>Name</label>
