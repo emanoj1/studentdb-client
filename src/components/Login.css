@@ -1,3 +1,5 @@
+/* Style the login page*/
+
 .login-container {
     display: flex;
     flex-wrap: wrap;
@@ -63,11 +65,13 @@
   }
   
   .forgot-password-link {
+    width: 50%;
     text-align: center;
     display: block;
     margin-top: 10px;
     color: #007bff;
     text-decoration: none;
+    padding: 10px;
   }
   
   .forgot-password-link:hover {
