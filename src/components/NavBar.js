@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/studentDB-logo-noBG.png';
+//import logo from '../assets/images/studentDB-logo-noBG.png';
 import '../styles/NavBar.css'; 
 
 function NavBar({ isLoggedIn, handleLogout }) {
@@ -14,7 +14,7 @@ function NavBar({ isLoggedIn, handleLogout }) {
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to={isLoggedIn ? "/dashboard" : "/"}>
-          <img src={logo} alt="Logo" className="logo-image" />
+          <img src="/images/studentDB-logo-noBG.png" alt="Logo" className="logo-image" />
         </Link>
       </div>
       <div className="navbar-toggle" onClick={toggleMenu}>

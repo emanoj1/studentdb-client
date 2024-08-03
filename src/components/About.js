@@ -3,8 +3,8 @@
 import React from 'react';
 import '../styles/About.css';
 import Footer from './Footer';
-import heroaboutimage from '../assets/images/about-page-hero-image.png';
-import team1 from '../assets/images/manoj-profile-photo.png';
+//import heroaboutimage from '../assets/images/about-page-hero-image.png';
+//import team1 from '../assets/images/manoj-profile-photo.png';
 
 function About() {
   return (
@@ -12,7 +12,7 @@ function About() {
       {/* Hero Section */}
       <div className="hero-section">
         <div className="hero-image">
-        <img src={heroaboutimage} alt="Hero" />
+        <img src="/images/about-page-hero-image.png" alt="Hero" />
         </div>
         <div className="hero-content">
           <h1>About StudentDB</h1>
@@ -41,7 +41,7 @@ function About() {
         <h2>Meet Our Team</h2>
         <div className="team-member">
           <div className="team-image">
-          <img src={team1} alt="Manoj" />
+          <img src="/images/manoj-profile-photo.png'" alt="Manoj" />
           </div>
           <div className="team-content">
             <h3>Manoj Kumar</h3>

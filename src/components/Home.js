@@ -3,18 +3,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
-import review1 from '../assets/images/review-1.png';
-import review2 from '../assets/images/review-2.png';
-import review3 from '../assets/images/review-3.png';
-import icon1 from '../assets/images/data-mgt-icon.png';
-import icon2 from '../assets/images/user-friendly-icon.png';
-import icon3 from '../assets/images/secure-icon.png';
-import icon4 from '../assets/images/cloud-icon.png';
-import icon5 from '../assets/images/trophy-icon.png';
-import icon6 from '../assets/images/contact-icon.png';
-import heroimage from '../assets/images/hero-image-homepage.png';
-import studentListImage from '../assets/images/student-list-display-studentdb.png';
-import addStudentImage from '../assets/images/add-student-display-studentdb.png';
+//import review1 from '../assets/images/review-1.png';
+//import review2 from '../assets/images/review-2.png';
+//import review3 from '../assets/images/review-3.png';
+//import icon1 from '../assets/images/data-mgt-icon.png';
+//import icon2 from '../assets/images/user-friendly-icon.png';
+//import icon3 from '../assets/images/secure-icon.png';
+//import icon4 from '../assets/images/cloud-icon.png';
+//import icon5 from '../assets/images/trophy-icon.png';
+//import icon6 from '../assets/images/contact-icon.png';
+//import heroimage from '../assets/images/hero-image-homepage.png';
+//import studentListImage from '../assets/images/student-list-display-studentdb.png';
+//import addStudentImage from '../assets/images/add-student-display-studentdb.png';
 
 function Home() {
   return (
@@ -22,7 +22,7 @@ function Home() {
       {/* Hero Section */}
       <div className="hero-section">
         <div className="hero-image">
-          <img src={heroimage} alt="Hero" />
+          <img src="/images/hero-image-homepage.png" alt="Hero" />
         </div>
         <div className="hero-content">
           <h1>Welcome to StudentDB!</h1>
@@ -44,7 +44,7 @@ function Home() {
 
         <div className="feature-box">
           <div className="feature-icon">
-            <img src={icon1} alt="Feature 1" />
+            <img src="/images/data-mgt-icon.png" alt="Feature 1" />
           </div>
           <div className="feature-content">
             <h3>Efficient Data Management</h3>
@@ -54,7 +54,7 @@ function Home() {
 
         <div className="feature-box">
           <div className="feature-icon">
-            <img src={icon2} alt="Feature 2" />
+            <img src="/images/user-friendly-icon.png" alt="Feature 2" />
           </div>
           <div className="feature-content">
             <h3>User-Friendly Interface</h3>
@@ -64,7 +64,7 @@ function Home() {
 
         <div className="feature-box">
           <div className="feature-icon">
-            <img src={icon3} alt="Feature 3" />
+            <img src="/images/secure-icon.png" alt="Feature 3" />
           </div>
           <div className="feature-content">
             <h3>Secure and Compliant</h3>
@@ -74,7 +74,7 @@ function Home() {
 
         <div className="feature-box">
           <div className="feature-icon">
-            <img src={icon4} alt="Feature 4" />
+            <img src="/images/cloud-icon.png" alt="Feature 4" />
           </div>
           <div className="feature-content">
             <h3>Anywhere, Anytime!</h3>
@@ -84,7 +84,7 @@ function Home() {
 
         <div className="feature-box">
           <div className="feature-icon">
-            <img src={icon5} alt="Feature 5" />
+            <img src="/images/trophy-icon.png" alt="Feature 5" />
           </div>
           <div className="feature-content">
             <h3>High Speed</h3>
@@ -94,7 +94,7 @@ function Home() {
 
         <div className="feature-box">
           <div className="feature-icon">
-            <img src={icon6} alt="Feature 6" />
+            <img src="/images/contact-icon.png" alt="Feature 6" />
           </div>
           <div className="feature-content">
             <h3>Customer Support</h3>
@@ -107,7 +107,7 @@ function Home() {
       <div className="image-section">
         <h2>Our platform is designed to be intuitive and user-friendly, ensuring a seamless experience for all users.</h2>
         <div className="image-container">
-          <img src={studentListImage} alt="Student List Display" />
+          <img src="/images/student-list-display-studentdb.png" alt="Student List Display" />
         </div>
         <h3>Easily view your list of students and have tools to edit and delete content at your finger tips!</h3>
       </div>
@@ -116,7 +116,7 @@ function Home() {
       <div className="image-section">
         <h2>Your data entry will be an enjoyable experience!</h2>
         <div className="image-container">
-          <img src={addStudentImage} alt="Add Student Display" />
+          <img src="/images/add-student-display-studentdb.png" alt="Add Student Display" />
         </div>
         <h3>A simple, quick and easy to use form for your student entry tasks! </h3>
       </div>
@@ -135,7 +135,7 @@ function Home() {
       <div className="testimonials-section">
         <div className="testimonial-box">
           <div className="testimonial-image">
-            <img src={review1} alt="Person 1" />
+            <img src="/images/review-1.png" alt="Person 1" />
           </div>
           <div className="testimonial-content">
             <p><strong>"StudentDB has transformed the way we manage student data."</strong></p>
@@ -146,7 +146,7 @@ function Home() {
         </div>
         <div className="testimonial-box">
           <div className="testimonial-image">
-            <img src={review2} alt="Person 2" />
+            <img src="/images/review-2.png" alt="Person 2" />
           </div>
           <div className="testimonial-content">
             <p><strong>"An indispensable tool for our institution."</strong></p>
@@ -157,7 +157,7 @@ function Home() {
         </div>
         <div className="testimonial-box">
           <div className="testimonial-image">
-            <img src={review3} alt="Person 3" />
+            <img src="/images/review-3.png" alt="Person 3" />
           </div>
           <div className="testimonial-content">
             <p><strong>"Highly recommended for all educational institutions."</strong></p>

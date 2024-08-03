@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Login.css';
-import loginImage from '../assets/images/login-image-drawkit.png';
+//import loginImage from '../assets/images/login-image-drawkit.png';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -58,7 +58,7 @@ function Login() {
         </form>
       </div>
       <div className="login-image">
-        <img src={loginImage} alt="Login Illustration" />
+        <img src="/images/login-image-drawkit.png" alt="Login Illustration" />
       </div>
     </div>    
   );

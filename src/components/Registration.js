@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Registration.css';
-import registrationImage from '../assets/images/registration-image-drawkit.png';
+//import registrationImage from '../assets/images/registration-image-drawkit.png';
 
 function Registration() {
   const [formData, setFormData] = useState({
@@ -49,7 +49,7 @@ function Registration() {
   return (
     <div className="registration-container">
       <div className="registration-image">
-        <img src={registrationImage} alt="Registration Illustration" />
+        <img src="/images/registration-image-drawkit.png" alt="Registration Illustration" />
       </div>
       <div className="registration-form">
         <h2>Great decision! Register your institution and start using studentDB!</h2>
