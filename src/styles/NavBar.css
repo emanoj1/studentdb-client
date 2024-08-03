@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #82E1DF;
-    padding: 10px 20px; /* Add padding to the navbar */
+    padding: 10px 20px;
   }
   
   .navbar-logo {
@@ -44,7 +44,7 @@
 
   /* Special styles for Register and Logout buttons */
 .navbar-links .register-btn, .navbar-links .logout-btn {
-  background-color: #FFD700; /* Example color for the button */
+  background-color: #FFD700;
   padding: 10px 20px;
   border-radius: 20px; /* Rounded edges */
   color: #333; /* Text color */
@@ -69,7 +69,7 @@
       display: none;
       flex-direction: column;
       width: 100%;
-      background-color: greenyellow;
+      background-color: lightgray; /* Nav bar background color */
       position: absolute;
       top: 60px; /* navbar height */
       left: 0;
