@@ -37,6 +37,7 @@ function StudentList() {
   return (
     <div>
       <h1>Student List</h1>
+      <p>Below are your current list of students on the database:</p>
       <div className="student-list-grid">
         <div className="student-list-header">
           <div>Name</div>
