@@ -1,106 +1,131 @@
 /* Nav Bar Styling */
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #82E1DF;
-    padding: 10px 20px;
-  }
-  
-  .navbar-logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-image {
-    width: 50%; 
-    height: auto;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0; 
-    padding: 0; 
-  }
-  
-  .navbar-links li {
-    margin-left: 20px;
-  }
-  
-  .navbar-links a, .navbar-links button {
-    color: black;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .navbar-links button:hover, .navbar-links a:hover {
-    text-decoration: underline;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #82E1DF;
+  padding: 10px 20px;
+}
 
-  /* Special styles for Register and Logout buttons */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 50%;
+  height: auto;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links a, .navbar-links button {
+  color: black;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-links button:hover, .navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Login button styles */
+.navbar-links a.login-btn {
+  padding: 10px 20px;
+  background-color: #ffbd59;
+  color: black;
+  border: none;
+  border-radius: 4px; /* Slightly rounded corners */
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline from links */
+}
+
+.navbar-links a.login-btn:hover {
+  background-color: #e68a00; /* Slightly darker orange on hover */
+}
+
+/* Special styles for Register and Logout buttons */
 .navbar-links .register-btn, .navbar-links .logout-btn {
-  background-color: #FFD700;
+  background-color: #ffde59;
   padding: 10px 20px;
   border-radius: 20px; /* Rounded edges */
-  color: #333; /* Text color */
-  font-weight: bold; /* Bold text */
+  color: #333; 
+  font-weight: bold;
 }
 
 .navbar-links .register-btn:hover, .navbar-links .logout-btn:hover {
   background-color: #FFC107; /* Slightly darker color on hover */
 }
-  
-  /* Hamburger menu styles */
-  .navbar-toggle {
+
+/* Hamburger menu styles */
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+/* Media queries for mobile view */
+@media (max-width: 768px) {
+  .navbar-links {
     display: none;
-    font-size: 24px;
-    cursor: pointer;
+    flex-direction: column;
+    width: 100%;
+    background-color: lightgray; /* Nav bar background color */
+    position: absolute;
+    top: 60px; /* navbar height */
+    left: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-links.navbar-links-open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .logo-image {
+    width: 10%; /* Adjust size for mobile */
+  }
+  
+  /* Remove boxes around login and register buttons on mobile */
+  .navbar-links a.login-btn, .navbar-links .register-btn {
+    padding: 5px 10px;
+    border-radius: 0;
+    background-color: transparent;
     color: black;
+    font-weight: normal;
   }
-  
-  /* Media queries for mobile view */
-  @media (max-width: 768px) {
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: lightgray; /* Nav bar background color */
-      position: absolute;
-      top: 60px; /* navbar height */
-      left: 0;
-      padding: 0;
-      margin: 0;
-    }
-  
-    .navbar-links.navbar-links-open {
-      display: flex;
-    }
-  
-    .navbar-links li {
-      margin: 10px 0;
-    }
-  
-    .navbar-toggle {
-      display: block;
-    }
-  
-    .logo-image {
-      width: 10%; /* Adjust size for mobile */
-    }
+
+  .navbar-links a.login-btn:hover, .navbar-links .register-btn:hover {
+    background-color: transparent;
+    color: #555;
   }
-  
-  @media (max-width: 480px) {
-    .logo-image {
-      width: 15%; /* Adjust size for smaller screens */
-    }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    width: 35%; /* Adjust size for smaller screens */
   }
-  
-  
-  
-  
-  
+}
