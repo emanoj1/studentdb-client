@@ -67,7 +67,6 @@ function Home() {
         </div>
       </div>
 
-
       {/* Student List image Section */}
       <div className="image-section">
         <h2>Our platform is designed to be intuitive and user-friendly, ensuring a seamless experience for all users.</h2>
