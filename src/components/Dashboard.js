@@ -61,9 +61,10 @@ function Dashboard() {
   return (
     <div>
       <h1>Dashboard</h1>
+      <h3>Welcome! Nice to see you here.</h3>
       <div className="admin-info">
         <p>Institute Name: {adminData.instituteName}</p>
-        <p>Logged in admin: {adminData.name}</p>
+        <p>Logged in Admin: {adminData.name}</p>
       </div>
       <div className="statistics">
         <p>Total Students: {statistics.totalStudents}</p>
