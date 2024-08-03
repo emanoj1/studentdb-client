@@ -3,18 +3,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
-//import review1 from '../assets/images/review-1.png';
-//import review2 from '../assets/images/review-2.png';
-//import review3 from '../assets/images/review-3.png';
-//import icon1 from '../assets/images/data-mgt-icon.png';
-//import icon2 from '../assets/images/user-friendly-icon.png';
-//import icon3 from '../assets/images/secure-icon.png';
-//import icon4 from '../assets/images/cloud-icon.png';
-//import icon5 from '../assets/images/trophy-icon.png';
-//import icon6 from '../assets/images/contact-icon.png';
-//import heroimage from '../assets/images/hero-image-homepage.png';
-//import studentListImage from '../assets/images/student-list-display-studentdb.png';
-//import addStudentImage from '../assets/images/add-student-display-studentdb.png';
 
 function Home() {
   return (

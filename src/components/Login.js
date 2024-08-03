@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Login.css';
-//import loginImage from '../assets/images/login-image-drawkit.png';
 
 function Login() {
   const [email, setEmail] = useState('');

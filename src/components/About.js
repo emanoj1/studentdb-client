@@ -3,8 +3,6 @@
 import React from 'react';
 import '../styles/About.css';
 import Footer from './Footer';
-//import heroaboutimage from '../assets/images/about-page-hero-image.png';
-//import team1 from '../assets/images/manoj-profile-photo.png';
 
 function About() {
   return (
@@ -41,7 +39,7 @@ function About() {
         <h2>Meet Our Team</h2>
         <div className="team-member">
           <div className="team-image">
-          <img src="/images/manoj-profile-photo.png'" alt="Manoj" />
+          <img src="/images/manoj-profile-photo.png" alt="Manoj" />
           </div>
           <div className="team-content">
             <h3>Manoj Kumar</h3>
