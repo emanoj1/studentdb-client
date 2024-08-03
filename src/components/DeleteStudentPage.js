@@ -6,6 +6,15 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/StudentList.css';
 import '../styles/Messages.css';
 
+// Utility function to format date
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based in JS
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
 function DeleteStudentPage() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -53,12 +62,12 @@ function DeleteStudentPage() {
       {message && <p className="success-message">{message}</p>}
       <div>
         <p><strong>Name:</strong> {student.name}</p>
-        <p><strong>Date of Birth:</strong> {student.dateOfBirth}</p>
+        <p><strong>Date of Birth (year-month-day):</strong> {formatDate(student.dateOfBirth)}</p>
         <p><strong>Gender:</strong> {student.gender}</p>
         <p><strong>Phone:</strong> {student.phone}</p>
         <p><strong>Email:</strong> {student.email}</p>
         <p><strong>Address:</strong> {student.address}</p>
-        <p><strong>Date of Enrollment:</strong> {student.dateOfEnrollment}</p>
+        <p><strong>Date of Enrollment (year-month-day):</strong> {formatDate(student.dateOfEnrollment)}</p>
         <p><strong>Area of Study:</strong> {student.areaOfStudy}</p>
         <button onClick={handleDelete} className="button delete-btn">Delete Student</button>
       </div>
