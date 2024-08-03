@@ -9,6 +9,9 @@ import review3 from '../assets/images/review-3.png';
 import icon1 from '../assets/images/data-mgt-icon.png';
 import icon2 from '../assets/images/user-friendly-icon.png';
 import icon3 from '../assets/images/secure-icon.png';
+import icon4 from '../assets/images/cloud-icon.png';
+import icon5 from '../assets/images/trophy-icon.png';
+import icon6 from '../assets/images/contact-icon.png';
 import heroimage from '../assets/images/hero-image-homepage.png';
 import studentListImage from '../assets/images/student-list-display-studentdb.png';
 import addStudentImage from '../assets/images/add-student-display-studentdb.png';
@@ -38,6 +41,7 @@ function Home() {
       {/* Features Section */}
       <h2 className="section-heading">Discover how StudentDB can enhance your institution's <br/> <span className="highlight"> efficiency and streamline your operations</span>. </h2>
       <div className="features-section">
+
         <div className="feature-box">
           <div className="feature-icon">
             <img src={icon1} alt="Feature 1" />
@@ -47,6 +51,7 @@ function Home() {
             <p>Easily organize and access all student information in one centralized location, reducing administrative workload and improving data accuracy.</p>
           </div>
         </div>
+
         <div className="feature-box">
           <div className="feature-icon">
             <img src={icon2} alt="Feature 2" />
@@ -56,6 +61,7 @@ function Home() {
             <p>Intuitive design ensures that administrators, teachers, and staff can quickly navigate and utilize the system without extensive training.</p>
           </div>
         </div>
+
         <div className="feature-box">
           <div className="feature-icon">
             <img src={icon3} alt="Feature 3" />
@@ -63,6 +69,36 @@ function Home() {
           <div className="feature-content">
             <h3>Secure and Compliant</h3>
             <p>Built with robust security measures to protect sensitive student data, ensuring compliance with educational data protection regulations.</p>
+          </div>
+        </div>
+
+        <div className="feature-box">
+          <div className="feature-icon">
+            <img src={icon4} alt="Feature 4" />
+          </div>
+          <div className="feature-content">
+            <h3>Anywhere, Anytime!</h3>
+            <p>Located in the cloud, your data is regularly backed-up and available to you no matter where you are and what device you are using!</p>
+          </div>
+        </div>
+
+        <div className="feature-box">
+          <div className="feature-icon">
+            <img src={icon5} alt="Feature 5" />
+          </div>
+          <div className="feature-content">
+            <h3>High Speed</h3>
+            <p>Pretty fast actually! Your data retrieval happens in just a few milliseconds to a second! Gone are the days of using clunky software and long download times!</p>
+          </div>
+        </div>
+
+        <div className="feature-box">
+          <div className="feature-icon">
+            <img src={icon6} alt="Feature 6" />
+          </div>
+          <div className="feature-content">
+            <h3>Customer Support</h3>
+            <p>We are deeply involved in supporting you and helping you succeed in your data management activities! When stuck or have new feature ideas, drop us a line!</p>
           </div>
         </div>
       </div>
