@@ -33,8 +33,9 @@
   }
   
   .login-form input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
+    margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
   }
@@ -77,3 +78,14 @@
   .forgot-password-link:hover {
     text-decoration: underline;
   }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+      flex-direction: column;
+  }
+
+  .login-image {
+      order: -1; /* Move the image to the top */
+  }
+}
