@@ -17,7 +17,7 @@
   .student-item span, .student-item button {
     flex: 1;
     min-width: 80px; /* Adjust min-width to make elements closer */
-    padding: 5px; /* Adjust padding */
+    padding: 5px;
   }
   
   .student-item button {
@@ -41,14 +41,14 @@
     text-decoration: none;
     border: none;
     cursor: pointer;
-    font-weight: bold; /* Bold text */
+    font-weight: bold;
     display: inline-block;
     margin: 5px; /* Add some margin between buttons */
   }
   
   /* Edit button styles */
   .edit-btn {
-    background-color: #50c356; /* Green color */
+    background-color: #50c356;
   }
   
   .edit-btn:hover {
@@ -57,7 +57,7 @@
   
   /* Delete button styles */
   .delete-btn {
-    background-color: #ff3333; /* Red color */
+    background-color: #ff3333;
   }
   
   .delete-btn:hover {
