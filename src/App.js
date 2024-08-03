@@ -13,7 +13,8 @@ import AdminSettings from './components/AdminSettings';
 import EditStudentPage from './components/EditStudentPage'; 
 import DeleteStudentPage from './components/DeleteStudentPage';
 import PrivateRoute from './components/PrivateRoute';
-import NavBar from './components/NavBar'; 
+import NavBar from './components/NavBar';
+import LiveChat from './components/LiveChat';
 import './App.css';
 
 const App = () => {
@@ -66,6 +67,7 @@ const App = () => {
           </Routes>
         </div>
       </div>
+      <LiveChat /> {/* Include LiveChat component */}
     </div>
   );
 };
