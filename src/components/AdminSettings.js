@@ -9,9 +9,12 @@ function AdminSettings() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    password: '',
     instituteName: '',
-    instituteRegistrationNumber: ''
+    instituteRegistrationNumber: '',
+    password: '',
+    securityAnswer1: '',
+    securityAnswer2: '',
+    securityAnswer3: '',
   });
   const [message, setMessage] = useState('');
 
@@ -80,27 +83,40 @@ function AdminSettings() {
         <p><strong>Institute Name:</strong> {currentDetails.instituteName}</p>
         <p><strong>Institute Registration Number:</strong> {currentDetails.instituteRegistrationNumber}</p>
       </div>
-      <h3>Update Details below:</h3>
+      <p>---</p>
+      <h3>Update any of your details below:</h3>
       <form onSubmit={handleSubmit} className="edit-student-form">
         <div className="form-group">
           <label>Name</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+          <input type="text" name="name" value={formData.name} onChange={handleChange} />
         </div>
         <div className="form-group">
           <label>Email</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label>Password</label>
-          <input type="password" name="password" value={formData.password} onChange={handleChange} />
+          <input type="email" name="email" value={formData.email} onChange={handleChange} />
         </div>
         <div className="form-group">
           <label>Institute Name</label>
-          <input type="text" name="instituteName" value={formData.instituteName} onChange={handleChange} required />
+          <input type="text" name="instituteName" value={formData.instituteName} onChange={handleChange} />
         </div>
         <div className="form-group">
           <label>Institute Registration Number</label>
-          <input type="text" name="instituteRegistrationNumber" value={formData.instituteRegistrationNumber} onChange={handleChange} required />
+          <input type="text" name="instituteRegistrationNumber" value={formData.instituteRegistrationNumber} onChange={handleChange} />
+        </div>
+        <div className='form-group'>
+          <label>What is the model of your first car?</label>
+          <input type="text" name="securityAnswer1" value={formData.securityAnswer1} onChange={handleChange} />
+        </div>
+        <div className='form-group'>
+          <label>What was the first concert you attended?</label>
+          <input type="text" name="securityAnswer2" value={formData.securityAnswer2} onChange={handleChange} />
+        </div>
+        <div className='form-group'>
+          <label>What is the postcode of your first ever home you lived in?</label>
+          <input type="text" name="securityAnswer3" value={formData.securityAnswer3} onChange={handleChange} />
+        </div>
+        <div className="form-group">
+          <label>New Password to set</label>
+          <input type="password" name="password" value={formData.password} onChange={handleChange} />
         </div>
         <button type="submit" className="button edit-btn">Update Profile</button>
       </form>
@@ -109,6 +125,7 @@ function AdminSettings() {
 }
 
 export default AdminSettings;
+
 
 
 
