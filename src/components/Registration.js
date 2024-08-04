@@ -76,7 +76,8 @@ function Registration() {
             />
           </div>
           <div>
-            <label>Password</label>
+            <label>Choose a new Password</label>
+            <p><em>Tip: Use a combination of alphabets, cases, numbers and special characters for better password strength.</em></p>
             <input
               type="password"
               name="password"
