@@ -116,6 +116,7 @@ function AdminSettings() {
         </div>
         <div className="form-group">
           <label>New Password to set</label>
+          <p><em>Tip: Use a combination of alphabets, cases, numbers and special characters for better password strength.</em></p>
           <input type="password" name="password" value={formData.password} onChange={handleChange} />
         </div>
         <button type="submit" className="button edit-btn">Update Profile</button>
