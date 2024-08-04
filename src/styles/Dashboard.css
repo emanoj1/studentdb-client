@@ -1,29 +1,25 @@
 /* CSS to style the statistics on main Dashboard page */
-.statistics {
+.admin-info, .statistics, .important-info {
   margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.statistics p {
-  margin: 5px 0;
+.admin-info p, .statistics p, .important-info p, .important-info li {
+  margin: 10px 0;
 }
 
-/* CSS for admin info display on Dashboard page */
-
-.admin-info {
-  margin-bottom: 20px;
+.important-info {
+  background-color: #e0f7fa; /* Light cyan background */
 }
 
-.admin-info p {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 5px 0;
+.important-info h3 {
+  margin-bottom: 10px;
+  color: #00796b;
 }
 
-.statistics {
-  margin-top: 20px;
-}
-
-.statistics p {
-  font-size: 16px;
-  margin: 5px 0;
+.important-info ol {
+  padding-left: 20px;
 }

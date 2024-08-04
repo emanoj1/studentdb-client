@@ -71,6 +71,21 @@ function Dashboard() {
         <p>Male Students: {statistics.maleStudents}</p>
         <p>Female Students: {statistics.femaleStudents}</p>
       </div>
+      <div className="important-info">
+        <h3>Important Information:</h3>
+        <ol>
+          <li>To add new students to your database, click on "Add Students" in the left panel.</li>
+          <li>You can edit or delete a student from the Student List page, accessible from the left panel.</li>
+          <li>To update any of your admin settings (Name, Email, Password, etc.), use the "Admin Settings" option in the left panel.</li>
+          <li>Remember: Anything related to security (password & security questions) is case-sensitive. For example, "A" and "a" are considered different.</li>
+          <li>We recommend keeping a record of your security question answers in a secure place for reference when resetting or updating them.</li>
+          <li>A good practice is to use misleading answers for security questions to enhance security.</li>
+          <li>Do not share your login details with anyone else other than those who have the right to access the webpage.</li>
+          <li>Always logout (top right) once you have completed your work.</li>
+          <li>If you encounter any technical issues and need assistance, please contact us via the LIVE Chat (bottom right) or use the Contact page.</li>
+          <li>If you like our product, please recommend them to other institutes as well! The more, the merrier!</li>
+        </ol>
+      </div>
     </div>
   );
 }
