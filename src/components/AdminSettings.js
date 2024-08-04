@@ -59,8 +59,8 @@ function AdminSettings() {
       };
       const body = JSON.stringify(formData);
       await axios.put(`${process.env.REACT_APP_API_BASE_URL}/institutions/profile`, body, config);
-      setMessage('Profile updated successfully!');
-      setTimeout(() => setMessage(''), 3000);
+      setMessage('Profile updated successfully! REFRESH page to see new details');
+      setTimeout(() => setMessage(''), 5000);
 
       if (formData.password) {
         localStorage.removeItem('auth-token');
