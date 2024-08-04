@@ -40,7 +40,7 @@ function ForgotPassword() {
     <div className="forgot-password-container">
       <h1>Forgot Password</h1>
       <h4>Fill out the fields below with details from your original registration and set a new password. Once authenticated, you will be able to login with the new password.</h4>
-      <p>Note: Answers are case-senstive!</p>
+      <p>Note: All fields below should be filled and answers are case-senstive!</p>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {success && <p style={{ color: 'green' }}>{success}</p>}
       <form onSubmit={handleSubmit}>
