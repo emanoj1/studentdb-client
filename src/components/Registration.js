@@ -65,6 +65,7 @@ function Registration() {
               required
             />
           </div>
+          
           <div>
             <label>Your work Email</label>
             <input
@@ -75,6 +76,29 @@ function Registration() {
               required
             />
           </div>
+
+          <div>
+            <label>Your institute Name</label>
+            <input
+              type="text"
+              name="instituteName"
+              value={instituteName}
+              onChange={onChange}
+              required
+            />
+          </div>
+
+          <div>
+            <label>Institute Registration Number</label>
+            <input
+              type="text"
+              name="instituteRegistrationNumber"
+              value={instituteRegistrationNumber}
+              onChange={onChange}
+              required
+            />
+          </div>
+
           <div>
             <label>Choose a new Password</label>
             <p><em>Tip: Use a combination of alphabets, cases, numbers and special characters for better password strength.</em></p>
@@ -86,26 +110,7 @@ function Registration() {
               required
             />
           </div>
-          <div>
-            <label>Your institute Name</label>
-            <input
-              type="text"
-              name="instituteName"
-              value={instituteName}
-              onChange={onChange}
-              required
-            />
-          </div>
-          <div>
-            <label>Institute Registration Number</label>
-            <input
-              type="text"
-              name="instituteRegistrationNumber"
-              value={instituteRegistrationNumber}
-              onChange={onChange}
-              required
-            />
-          </div>
+
           <h3>Security questions for Password Reset when required.</h3>
           <h4>NOTE: Answers are case-senstive! Remember or note them down (as it is) for later use.</h4>
           <div>
