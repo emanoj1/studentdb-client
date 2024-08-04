@@ -52,6 +52,7 @@ function Registration() {
       </div>
       <div className="registration-form">
         <h2>Great decision! Register your institution and start using studentDB!</h2>
+        <h4>Note: All fields below should be completed.</h4>
         {error && <p className="error-message">{error}</p>}
         {successMessage && <p className="success-message">{successMessage}</p>}
         <form onSubmit={onSubmit}>
@@ -65,7 +66,7 @@ function Registration() {
               required
             />
           </div>
-          
+
           <div>
             <label>Your work Email</label>
             <input
