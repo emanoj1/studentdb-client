@@ -13,8 +13,8 @@ function About() {
         <img src="/images/about-page-hero-image.png" alt="Hero" />
         </div>
         <div className="hero-content">
-          <h1>About StudentDB</h1>
-          <p>StudentDB is dedicated to providing educational institutions with a robust tool for managing student data and enhancing administrative processes.</p>
+          <h1>About Us</h1>
+          <p>StudentDB is dedicated to providing educational institutions with a robust tool for managing student data and enhancing administrative processes. We are located in Sydney, Australia and serving the educational community worldwide from here!</p>
         </div>
       </div>
 
@@ -44,9 +44,9 @@ function About() {
           <div className="team-content">
             <h3>Manoj Kumar</h3>
             <p><strong>Role:</strong> Founder, Coder & Customer Support</p>
-            <p>My name is Manoj Kumar, the SOLO brainchild behind this web app. I live in Sydney, Australia, where I work full-time in digital advertising technology while also studying to become a full stack web developer.</p>
-            <p>I have been involved in the education sector for a very long time both in marketing & admin, and understand clearly the pain points faced by institutes in effective data management using technology. Combining all those experiences, I built this app as the first step in bringing efficiencies to your centre!  </p>
-            <p>Additionally, I am an indie author in the making, having published my first children’s picture book in 2024!</p>
+            <p>My name is Manoj Kumar, the SOLO brainchild behind this web app. I live in Sydney, Australia, where I work full-time in digital advertising technology and a full-stack web developer.</p>
+            <p>With extensive experience in both marketing and administration within the education sector, I understand the challenges that institutes face in effective data management. Drawing from this background, I developed this app as a first step toward enhancing operational efficiency at your institution.</p>
+            <p>Additionally, I am an indie author in the making, having published my first children’s picture book in 2024! Check that out here: <a href="https://www.chesterthedino.com/" target="_blank">Chester, the Dino.</a></p>
             <p>I extend my heartfelt thanks to you for visiting this website, and I hope you enjoy using this app while supporting indie makers and their dreams. Your support motivates me to continue dreaming differently and creating unique products.</p>
           </div>
         </div>
