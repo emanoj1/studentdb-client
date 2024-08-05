@@ -15,6 +15,7 @@ function About() {
         <div className="hero-content">
           <h1>About Us</h1>
           <p>StudentDB is dedicated to providing educational institutions with a robust tool for managing student data and enhancing administrative processes. We are located in Sydney, Australia and serving the educational community worldwide from here!</p>
+          <p>We launched in August 2024 and have already been warmly embraced by a diverse range of educational institutions. The swift acceptance of our platform is a testament to its effectiveness in addressing the critical need for efficient data management in education. Institutes of all sizes and types have recognized the value of our user-friendly and comprehensive solution, which streamlines administrative processes and enhances overall productivity. Our commitment to continuous improvement and understanding of the education sector's unique challenges has resonated with educators and administrators, making our app an indispensable tool for modern educational management.</p>
         </div>
       </div>
 
