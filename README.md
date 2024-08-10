@@ -3,26 +3,47 @@ _Note: A MERN assignment project / For study purposes only / Not offered as an o
 
 **Team**: a solo project by Manoj Kumar
 
-## Helpful links
+## Deployment Summary
 
-### Deployment info
-
-**Final launched website**: https://studentdb.online
-
-Deployed production (Client/Frontend): https://studentdbonline.netlify.app/  
-Deployed production (Server/backend): https://studentdb-server.onrender.com
-
-### GitHub Repositories
-Client/Frontend: https://github.com/emanoj1/studentdb-client  
-Server/Backend: https://github.com/emanoj1/studentdb-server  
+**Launched website**: https://studentdb.online
 
 ### Video Walk-thru
 Check out the full functionalities & features of the website!  
 
 [![Video Walk thru image](./src/docs/images/video-walk-thru-studentdb-ss.png)](https://www.loom.com/share/132bc7bb472a45489ce28d018b19100e?sid=cd6af565-7413-48ff-bb9c-341ecb1dd9d3)
 
+---
+### CONTENTS
+_Note: "R" as in "R1, R2, etc" denotes the word, "Requirement"._
+### PART-A
+- [R1. Description of website](#r1-description-of-website)
+- [R2. Dataflow Diagram](#r2-dataflow-diagram)
+- [R3. Application Architecture Diagram](#r3-application-architecture-diagram)
+- [R4. User Stories](#r4-user-stories)
+- [R5. Wireframes for multiple standard screen sizes](#r5-wireframes)
+- [R6. Kangan Board](#r6-kanban-board-screenshots)
 
-## About the Website
+---
+
+### PART-B
+- [R1. Tech stack used](#r1-tech-stack-used)
+- [R2. Well designed code](#r2-well-designed-code)
+- [R3. Employing a source control methodology](#r3-employing-a-source-control-methodology)
+- [R4. Ability to work in a team](#r4-ability-to-work-in-a-team)
+- [R5. A working application that meets client & user needs](#r5-a-working-application)
+- [R6. Deploying the application to a cloud hosting service](#r6-deploying-the-app-to-a-cloud-hosting-service)
+- [R7. An application with an intuitive user interface](#r7-an-application-with-an-intuitive-user-interface)
+- [R8. Evidence of user testing](#r8-evidence-of-user-testing)
+- [R9. Utilising a formal testing framework](#r9-utilising-a-formal-testing-framework)
+- [R10. URL to the deployed website](#r10-url-to-the-deployed-website)
+- [R11. GitHub repositories](#r11-github-repositories)
+
+
+---
+
+# PART A  
+
+# R1 Description of website
 
 #### Purpose
 The primary purpose of **StudentDB**, the online student management system is to provide educational institutions with a comprehensive and efficient way to manage student data. This system will streamline administrative tasks, improve data accuracy, and enhance communication between the institution and its students. By leveraging modern web technologies, the system aims to offer a user-friendly experience that saves time and resources for educational institutions.
@@ -86,7 +107,7 @@ The core functionality of the system lies in its ability to manage student infor
 
 Overall, **studentDB** aims to become an indispensable tool for educational institutions, offering a seamless and efficient way to handle student information while leveraging the powerful capabilities of the MERN tech stack.
 
-## DATAFLOW DIAGRAM
+# R2 DATAFLOW DIAGRAM
 
 To begin with, let's have a look at the **standard control workflow** before we present the detailed dataflow diagram, to get a top-level view of the system:
 
@@ -252,7 +273,7 @@ External systems are used for tasks like generating authentication tokens and se
 
 This comprehensive DFD shows how the data flows between the different parts of the system, providing a detailed overview of the interactions and data exchanges within the application.  
 
-## APPLICATION ARCHITECTURE DIAGRAM
+# R3 APPLICATION ARCHITECTURE DIAGRAM
 
 Below is a detailed Application Architecture Diagram for the online student management system using the MERN stack.
 
@@ -305,11 +326,11 @@ Below is a detailed Application Architecture Diagram for the online student mana
 
 This architecture ensures a clear separation of concerns, with the frontend and backend interacting through well-defined API endpoints, and the database being managed through an ORM for ease of use and maintenance.
 
-## USER STORIES
+# R4 USER STORIES
 
 _Art credit: drawn by Manoj Kumar_
 
-![](./src/docs/userstories/John-citizen-very-small.png)  
+![user story image](./src/docs/userstories/John-citizen-very-small.png)  
 
 **John Citizen**:   
 ---
@@ -346,7 +367,7 @@ _Art credit: drawn by Manoj Kumar_
 </ol>
 
 
-![](./src/docs/userstories/Jane-Appleseed-very-small.png)  
+![user story image](./src/docs/userstories/Jane-Appleseed-very-small.png)  
 **Jane Appleseed**:  
 ---
 
@@ -456,7 +477,7 @@ _Art credit: drawn by Manoj Kumar_
 
 These user stories cover the primary functionalities and interactions for the system, ensuring the needs of the institution administrators and potential users are met.
 
-## Wireframes
+# R5 Wireframes
 
 The website is designed in a way to keep content and design minimalistic, and keep it easy for the user. It will use 1-2 fonts and 1-2 colors as well.  
 
@@ -585,7 +606,7 @@ The Admin Settings page gives the institute admin user to change any of the deta
 ### Admin Settings page - Mobile
 ![Admin page mobile](./src/docs/wireframes/admin-settings-figma-mobile.png)
 
-## Kanban board screenshots
+# R6 Kanban board screenshots
 
 The various to-do tasks for the preparation of this project documentation was managed via a 3-lane Kanban board using **Notion**. Notion is a productivity and note-taking web application. It is very similar to the propular apps like Trello and Evernote.   
 
@@ -593,7 +614,234 @@ Since the web app project involved 2 separate work - the documentation and the b
 
 The Kanban board features 3 swimlanes - **Not Started**, **In Progress** and **Done**. All the required activities are first set as tasks in the **Not Started** column, and when the task is to be actioned, it is moved to the **In Progress** column. Once the task is completed, the task card is moved into the **Done** column.
 
-![](./src/docs/kanban/kanban-board-ss.png)
+![Kanban board](./src/docs/kanban/kanban-board-ss.png)
+
+---
+# PART B
+
+# R1 Tech stack used
+
+The web app was developed using the MERN tech stack.
+
+![](./src/docs/images/mern-logo.png)
+
+**MongoDB**: For the database to store student and institution data.  
+**Express.js**: For the back-end server to handle API requests and manage data transactions.  
+**React.js**: For the front-end, providing a responsive and interactive user interface.  
+**Node.js**: For the server-side runtime environment, ensuring efficient handling of concurrent operations.  
+
+# R2 Well designed code
+The code was written keeping in mind the industry best practices and code organization. 
+- Separated modules were used in both frontend and backend to manage each function/focus. Not only does this help the code arrangement look neat, but it also aides in quick troubleshooting. 
+- Care was also taken to follow DRY (Don't Repeat Yourself) coding principles.
+- An extensive list of libraries were used in this project for both the client and server sides:
+
+### Server-Side Libraries (in studentdb-server):  
+**express**: A web framework for Node.js to create server-side applications.  
+**mongoose**: An Object Data Modeling (ODM) library for MongoDB and Node.js.  
+**bcryptjs**: A library to hash passwords.  
+**dotenv**: A module to load environment variables from a .env file.  
+**jsonwebtoken**: A library to generate and verify JSON Web Tokens (JWT) for authentication.  
+**body-parser**: Middleware to parse incoming request bodies in a middleware before handlers.  
+**cors**: Middleware to enable Cross-Origin Resource Sharing (CORS) with various options.  
+**nodemon**: A tool that helps develop Node.js applications by automatically restarting the server when file changes are detected.  
+
+### Dev Dependencies (for testing):  
+**jest**: A testing framework for JavaScript.  
+**supertest**: A library for testing Node.js HTTP servers using a high-level API.  
+
+### Client-Side Libraries:  
+
+**@testing-library/react**: A library for testing React components.  
+**react-router-dom**: A library that enables routing in React applications.  
+**axios (used in tests)**: A promise-based HTTP client for the browser and Node.js.  
+
+
+# R3 Employing a source control methodology
+
+![](./src/docs/images/git-hub-logo-octocat.png)
+
+GitHub was the chosen tool to manage all source control, and it was made easier using GitHun Desktop. 2 repositories were used - for the frontend and the backend.
+![GitHub Repos](./src/docs/images/github-repo-ss.png)
+
+You can view the repos here:  
+**Client/Frontend**: https://github.com/emanoj1/studentdb-client  
+**Server/Backend**: https://github.com/emanoj1/studentdb-server  
+
+Branches were used for specific functions, and when everything seemed to be working, they were pushed across to the main.
+![GitHub Brances](./src/docs/images/github-branches-ss.png)
+
+All changes were checked extensively on the localhost before their push to the `main` branch. 
+
+# R4 Ability to work in a team
+
+This was a solo project, and hence the owner of this repo (Manoj Kumar) was THE team! However, I worked with a team mindset using traits such as patience, delegating work to different days (rather than a person), and going over and above to provide as much information & work that can help this project succeed.  
+
+In terms of work management, I used a Kanban board on [Notion](https://notion.so), where I separated the work into Part-A and Part-B, and assigned swimlanes (not started, in progress, done) to manage the work, as what I would've done if we had a team managing different aspects of the web app design.
+
+In this way, I was able to demostrate:
+- the use of a recognised project management methodology
+- the use of a recognized task delegation methodology  
+
+# R5 A working application
+
+The initial development phase of the application focused on "soft launching" on the localhost, where all the working and key functions of the web app was showcased **minus the visual design**:
+
+**Logged-out State**
+- Home page with placeholder content
+- An About page with placeholder content
+- A Contact page with placeholder content
+- A working Login page with basic Username and Password fields
+- A Registration page with basic fields (Name, Email, Password, Institute Name & ID#)
+- A navigation bar across all pages with links to the above pages
+- A sample logo
+
+**Logged-in state**
+- The Admin landing page (once logged-in) presented basic student record stats
+- Also, featured the links to Add Student, Edit Student, Delete Student and Update Admin records.
+- Logout button
+
+All of the above was styled in minimalist colors (standard black & white). 
+
+All the API endpoints were tested using [Insomnia](https://insomnia.rest) to ensure everything was working.
+
+The aim of the providing a "working application" was to show the "client" that all the key functions of the app was working and to check if anything required an update. Once all the issues were sorted and matched the project scope perfectly, the styling commenced towards the backend phase of the project.
+
+# R6 Deploying the app to a cloud hosting service
+
+Once all the key features (_page navigation, login, registration, password resets, student CRUD operations_) were working perfectly, all styling completed (_colors, fonts_) and all content added to the respective pages, the project moved to its deployment phase to a cloud hosting service.
+- the frontend was deployed on [Netlify](https://netify.com)
+- the backend was deployed on [Render](https://render.com)
+- the database was deployed on [MongoDB](https://mongodb.com)
+
+Below are the deployed links:
+- Deployed production (Client/Frontend): https://studentdbonline.netlify.app/
+- Deployed production (Server/backend): https://studentdb-server.onrender.com
+
+Below are some views from their dashboards:
+
+1. Deployment on Netlify (the frontend)
+![Netlify deployment](./src/docs/images/netlify-deploy-ss.png)
+
+2. Deployment on Render (the backend)
+![Render deployment](./src/docs/images/render-deploy-ss.png)
+
+3. Deployment to MongoDB (the database)
+![MongoDB deploy](./src/docs/images/mongodb-deploy-ss.png)
+
+4. An example collection on MongoDB
+![MongoDB Collections](./src/docs/images/mongodb-collection-ss.png)
+_Security Answers hidden from view on purpose._
+
+
+# R7 An application with an intuitive user interface
+
+The website features a minimalist design for both is style and functions. Only few colors are used for section separation, the standout of the navigation bar, and bright buttons for key user operations.
+
+### Homepage
+![Homepage full view](./src/docs/images/full-page-screen-capture-studentdb-homepage.png)
+
+The Homepage features the following prominently:
+- The nav bar with items to navigate to.
+- The Login & Register buttons are bright & boxed for quick spotting.
+- A hero section in the beginning with an elevator pitch
+- 6 sections showcasing the features & benefits of the site, images from the dashboard for the user to see how it looks "inside" or the backend before signing up, a video tour of the full website, testimonials from signed-up users and finally a link to the contact page.
+
+### Registration page
+![Rego page](./src/docs/images/registration-page.png)
+
+This is the most important page! Registration deals with collecting the institution admins signup details, as well as 3 security answers to assist in password reset.
+
+The page is styled with a modern & youthful focus, using round-edged and shadowed input fields, and images.
+
+### Login page
+![Login page](./src/docs/images/login-page.png)
+
+
+### Forgot Password page
+![Forgot password page](./src/docs/images/forgot-password-page.png)
+
+
+### Admin Dashboard - landing page
+![Admin dashboard](./src/docs/images/admin-dashboard-page.png)
+
+
+### Admin Dashboard - Student List page
+![Student List](./src/docs/images/student-list-page.png)
+
+
+### Admin Dashboard - Add Student page
+![Add Student](./src/docs/images/add-student-page.png)
+
+
+### Admin Dashboard - Admin Settings page
+![Admin Settings](./src/docs/images/admin-settings-page.png)
+
+
+### Contact Us page
+![Contact](./src/docs/images/contact-page.png)
+
+The Contact page uses a 3rd widget [Tally.so](https://tally.so) which is embedded to the page as an iFrame widget. Upon submission of content from this page, the information reaches the web app owner by email. Using 3rd party widget is far easier to implement and maintain compared to building a custom form on the page.
+
+All pages of the website also feature a LIVE Chat bubble, also a 3rd party widget from [Tawk](https://tawk.to):
+![Chat box](./src/docs/images/chat-widget.png)
+
+# R8 Evidence of user testing
+
+### Test website responsiveness
+![](./src/docs/images/user-test-device-responsive.png)
+
+
+### Test all main functions
+![](./src/docs/images/user-test-main-page-components.png)
+
+
+### Test on Navigarion bar
+![](./src/docs/images/user-test-navbar.png)
+
+
+# R9 Utilising a formal testing framework
+
+### Client-side
+
+**Test - the Register button**
+![](./src/docs/images/jest-register-pass.png)
+
+**Test - the Registration submission function**
+![](./src/docs/images/jest-registration-pass.png)
+
+**Test - the Login function**
+![](./src/docs/images/jest-login-pass.png)
+
+**Test - the Forgot Password function**
+![](./src/docs/images/jest-forgotpassword-pass.png)
+
+**Test - the appearance of the Contact form widget**
+![](./src/docs/images/jest-contact-pass.png)
+
+### Server-side
+
+**Test - Check user login**
+![](./src/docs/images/jest-server-login-test-pass.png)
+
+
+# R10 URL to the deployed website
+
+The web app on its own domain is available here: [studentdb.online](https://studentdb.online)
+
+In order to test the functionalities of the website in a logged-in state and test teh CRUD operations, I highly recommend you sign-up to the site, login with your new details, add some students, edit & delete them, and even check out updating your signup information as well!  
+
+If that's too much work, you can use the below test logins:  
+username: `tomg@onlymusicschool.com`   
+password: `TomY2024*`  
+
+# R11 GitHub repositories
+
+The repositories are:   
+Client/Frontend: https://github.com/emanoj1/studentdb-client  
+Server/Backend: https://github.com/emanoj1/studentdb-server 
+
+GitHub Desktop was used for the timely & consistent management of the repositories. Branches were used, which were then merged into `main` once everything was working.
 
 ---
 
