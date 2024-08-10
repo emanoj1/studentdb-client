@@ -894,35 +894,35 @@ Below are the Terminal results for each of the above tests:
 
 ### Client-side
 
-**Test 1 - the Register button**
+**Test 1 - the Register button**  
 ![Jest-Register](./src/docs/images/jest-register-pass.png)  
-This is the Jest test for the Register button on the navigation bar.
+This is the Jest test for the Register button on the navigation bar.  
 
-**Test 2 - the Registration submission function**
+**Test 2 - the Registration submission function**  
 ![Jest-Registration](./src/docs/images/jest-registration-pass.png)  
-This is the Jest test for the Registration button.
+This is the Jest test for the Registration button.  
 
-**Test 3 - the Login function**
+**Test 3 - the Login function**  
 ![Jest-Login](./src/docs/images/jest-login-pass.png)  
-This is the Jest test for the Login button.
+This is the Jest test for the Login button.  
 
-**Test 4 - the Forgot Password function**
+**Test 4 - the Forgot Password function**  
 ![Jest-Password](./src/docs/images/jest-forgotpassword-pass.png)  
-This is the Jest test for testing the Forgot Password button function.
+This is the Jest test for testing the Forgot Password button function.  
 
-**Test 5 - the Student List function**
-![Jest-Contact](./src/docs/images/jest-contact-pass.png)
-
-**Test 6 - the Contact form widget**
+**Test 5 - the Student List function**  
 ![Jest-Contact](./src/docs/images/jest-contact-pass.png)  
-This is the Jest test for the Contact page. The aim is:
-- To test - the presence of the iFrame element on the Contact page
-- To test - the correctness of the src attribute of the iFrame
+
+**Test 6 - the Contact form widget**  
+![Jest-Contact](./src/docs/images/jest-contact-pass.png)  
+This is the Jest test for the Contact page. The aim is:  
+- To test - the presence of the iFrame element on the Contact page  
+- To test - the correctness of the src attribute of the iFrame  
 
 ### Server-side
 
-**Test 6 - Check user login**
-![Jest-login](./src/docs/images/jest-server-login-test-pass.png)
+**Test 6 - Check user login**  
+![Jest-login](./src/docs/images/jest-server-login-test-pass.png)  
 
 [Back to top](#deployment-summary)
 
