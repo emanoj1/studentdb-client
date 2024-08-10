@@ -924,6 +924,12 @@ This is the Jest test for the Contact page. The aim is:
 **Test 6 - Check user login**  
 ![Jest-login](./src/docs/images/jest-server-login-test-pass.png)  
 
+This test requires 2 steps:
+- seed a test data (user details) into MongoDB
+- test the login with the new details
+
+A separate test MongoDB database & collections was created for it to work.
+
 [Back to top](#deployment-summary)
 
 # R10 URL to the deployed website
