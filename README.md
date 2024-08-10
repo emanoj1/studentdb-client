@@ -3,11 +3,20 @@ _Note: A MERN assignment project / For study purposes only / Not offered as an o
 
 **Team**: a solo project by Manoj Kumar
 
-## Deployment Summary
+# Deployment Summary
 
-**Launched website**: https://studentdb.online
+**Launched website** 🚀
+- https://studentdb.online
 
-### Video Walk-thru
+**Production deployment** 
+- Client/Frontend: https://studentdbonline.netlify.app/  
+- Server/backend: https://studentdb-server.onrender.com
+
+**GitHub Repositories**  
+- Client/Frontend: https://github.com/emanoj1/studentdb-client  
+- Server/Backend: https://github.com/emanoj1/studentdb-server 
+
+### Video Walk-thru 📺
 Check out the full functionalities & features of the website!  
 
 [![Video Walk thru image](./src/docs/images/video-walk-thru-studentdb-ss.png)](https://www.loom.com/share/132bc7bb472a45489ce28d018b19100e?sid=cd6af565-7413-48ff-bb9c-341ecb1dd9d3)
@@ -106,6 +115,8 @@ A secure and user-friendly registration process will allow institutions to sign 
 The core functionality of the system lies in its ability to manage student information. The database will be designed to store a wide range of student details, from personal information to academic records. Administrators will be able to add new students, update existing records, and remove outdated information with ease. Advanced search and filtering options will help users quickly find specific student data.
 
 Overall, **studentDB** aims to become an indispensable tool for educational institutions, offering a seamless and efficient way to handle student information while leveraging the powerful capabilities of the MERN tech stack.
+
+[Back to top](#deployment-summary)
 
 # R2 DATAFLOW DIAGRAM
 
@@ -273,6 +284,8 @@ External systems are used for tasks like generating authentication tokens and se
 
 This comprehensive DFD shows how the data flows between the different parts of the system, providing a detailed overview of the interactions and data exchanges within the application.  
 
+[Back to top](#deployment-summary)
+
 # R3 APPLICATION ARCHITECTURE DIAGRAM
 
 Below is a detailed Application Architecture Diagram for the online student management system using the MERN stack.
@@ -324,7 +337,9 @@ Below is a detailed Application Architecture Diagram for the online student mana
 - **Documents**: Individual records in the collections.
 - **Mongoose**: An ORM for MongoDB, providing a schema-based solution to model the application data and interact with MongoDB.
 
-This architecture ensures a clear separation of concerns, with the frontend and backend interacting through well-defined API endpoints, and the database being managed through an ORM for ease of use and maintenance.
+This architecture ensures a clear separation of concerns, with the frontend and backend interacting through well-defined API endpoints, and the database being managed through an ORM for ease of use and maintenance.  
+
+[Back to top](#deployment-summary)
 
 # R4 USER STORIES
 
@@ -477,6 +492,8 @@ _Art credit: drawn by Manoj Kumar_
 
 These user stories cover the primary functionalities and interactions for the system, ensuring the needs of the institution administrators and potential users are met.
 
+[Back to top](#deployment-summary)
+
 # R5 Wireframes
 
 The website is designed in a way to keep content and design minimalistic, and keep it easy for the user. It will use 1-2 fonts and 1-2 colors as well.  
@@ -614,7 +631,9 @@ Since the web app project involved 2 separate work - the documentation and the b
 
 The Kanban board features 3 swimlanes - **Not Started**, **In Progress** and **Done**. All the required activities are first set as tasks in the **Not Started** column, and when the task is to be actioned, it is moved to the **In Progress** column. Once the task is completed, the task card is moved into the **Done** column.
 
-![Kanban board](./src/docs/kanban/kanban-board-ss.png)
+![Kanban board](./src/docs/kanban/kanban-board-ss.png)  
+
+[Back to top](#deployment-summary)
 
 ---
 # PART B
@@ -707,6 +726,8 @@ All the API endpoints were tested using [Insomnia](https://insomnia.rest) to ens
 
 The aim of the providing a "working application" was to show the "client" that all the key functions of the app was working and to check if anything required an update. Once all the issues were sorted and matched the project scope perfectly, the styling commenced towards the backend phase of the project.
 
+[Back to top](#deployment-summary)
+
 # R6 Deploying the app to a cloud hosting service
 
 Once all the key features (_page navigation, login, registration, password resets, student CRUD operations_) were working perfectly, all styling completed (_colors, fonts_) and all content added to the respective pages, the project moved to its deployment phase to a cloud hosting service.
@@ -754,31 +775,31 @@ This is the most important page! Registration deals with collecting the institut
 
 The page is styled with a modern & youthful focus, using round-edged and shadowed input fields, and images.
 
-### Login page
+### Login page  
 ![Login page](./src/docs/images/login-page.png)
 
 
-### Forgot Password page
+### Forgot Password page  
 ![Forgot password page](./src/docs/images/forgot-password-page.png)
 
 
-### Admin Dashboard - landing page
+### Admin Dashboard - landing page  
 ![Admin dashboard](./src/docs/images/admin-dashboard-page.png)
 
 
-### Admin Dashboard - Student List page
+### Admin Dashboard - Student List page  
 ![Student List](./src/docs/images/student-list-page.png)
 
 
-### Admin Dashboard - Add Student page
+### Admin Dashboard - Add Student page  
 ![Add Student](./src/docs/images/add-student-page.png)
 
 
-### Admin Dashboard - Admin Settings page
+### Admin Dashboard - Admin Settings page  
 ![Admin Settings](./src/docs/images/admin-settings-page.png)
 
 
-### Contact Us page
+### Contact Us page  
 ![Contact](./src/docs/images/contact-page.png)
 
 The Contact page uses a 3rd widget [Tally.so](https://tally.so) which is embedded to the page as an iFrame widget. Upon submission of content from this page, the information reaches the web app owner by email. Using 3rd party widget is far easier to implement and maintain compared to building a custom form on the page.
@@ -786,19 +807,65 @@ The Contact page uses a 3rd widget [Tally.so](https://tally.so) which is embedde
 All pages of the website also feature a LIVE Chat bubble, also a 3rd party widget from [Tawk](https://tawk.to):
 ![Chat box](./src/docs/images/chat-widget.png)
 
+[Back to top](#deployment-summary)
+
 # R8 Evidence of user testing
 
-### Test website responsiveness
-![](./src/docs/images/user-test-device-responsive.png)
+#### What is it?
+Every item on the website was manually checked to ensure that they were working as intended. The process starts with checking them on the development environment (localhost) and then checking them again once they are in production/deployed state.
 
+So, the one document captured both the development and production statuses.
 
-### Test all main functions
-![](./src/docs/images/user-test-main-page-components.png)
+#### Where was it captured?
+An excel document was maintained which listed all the items to be tested for each page of the website. This is the format:
+- **Test #**: This is a serial number assigned to the test, as simple as 1,2,3, etc.
+- **Testing Item**: A short info on what is going to be tested.
+- **Definition**: A short info on what this specific test is about.
+- **Input Command**: What should you action to get the test underway.
+- **Expected Output**: What the expected result should you be when an action is performed.
+- **Actual Result**: What was the result in reality you observed once the test was actioned.
+- **Test Status**: The test is marked as PASSED or FAILED based on the outcome.
+- **Tested Date**: The date on which the test was carried out.
 
+![](./src/docs/images/user-test-row-headings.png)
 
-### Test on Navigarion bar
-![](./src/docs/images/user-test-navbar.png)
+Then, as the test begins the observations are entered into the appropriate columns.
 
+If a test has failed, then the web developer goes back to the source code to troubleshoot, till the result is a PASSED STATUS.
+
+#### How was the information/observation organized?
+The excel document maintained multiple sheets (5 sheets), each one capturing a specific set of tests:
+
+![](./src/docs/images/user-test-excel-sheets.png)
+
+- **Device View**: Testing the bahaviour of the website for responsiveness (desktop, tablet & mobile).
+- **Main Page Components**: Testing all the functions and features of the website (login, authentications, navigation to all pages, etc).
+- **Navigation Bar**: Testing the navigation bar for responsiveness and how it behaves in logged-out state and logged-in state. 
+- **Admin Dashboard**: Testing to see how the Admin (logged-in state) pages work (stats, CRUD operations, etc).
+- **LIVE Chat Widget**: Test if the LIVE chat widget is working or not.
+
+#### Evidence of the full testing:
+
+Below are screenshots from the 5 main testing areas. Only a snapshot has been provided below as the sheet for some of the test is rather a long one.
+
+### Manual unit test website responsiveness  
+![Manual test-responsiveness](./src/docs/images/user-test-device-responsive.png)
+
+### Manual unit test - all main functions  
+![Manual test-all functions 1](./src/docs/images/user-test-main-page-components.png)
+![Manual test-all functions 2](./src/docs/images/user-test-page-2-main-page.png)
+
+### Manual unit test on the Navigarion bar  
+![Manual test-Nav](./src/docs/images/user-test-navbar.png)
+
+### Manual unit test on the Admin Dashboard
+![Manual test-all admin 1](./src/docs/images/user-test-admin-dashboard.png)
+![Manual test-all admin 2](./src/docs/images/user-test-page-2-admin.png)
+
+### Manual unit test for the presence of the LIVE Chat widget
+![Manual test Chat](./src/docs/images/unit-test-live-chat.png)
+
+[Back to top](#deployment-summary)
 
 # R9 Utilising a formal testing framework
 
@@ -824,6 +891,7 @@ All pages of the website also feature a LIVE Chat bubble, also a 3rd party widge
 **Test - Check user login**
 ![](./src/docs/images/jest-server-login-test-pass.png)
 
+[Back to top](#deployment-summary)
 
 # R10 URL to the deployed website
 
@@ -843,6 +911,8 @@ Server/Backend: https://github.com/emanoj1/studentdb-server
 
 GitHub Desktop was used for the timely & consistent management of the repositories. Branches were used, which were then merged into `main` once everything was working.
 
+[Back to top](#deployment-summary)
+
 ---
 
 # Getting Started with Create React App
@@ -856,7 +926,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.  
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -866,52 +936,7 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+--- 
+[Back to top](#deployment-summary)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### THE END.
