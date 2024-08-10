@@ -954,6 +954,16 @@ GitHub Desktop was used for the timely & consistent management of the repositori
 
 ---
 
+## Features not incorporated or were introduced
+
+PART-A has the full plan of what I intended to achieve in PART-B. However, certain features shown in PART-A was not carried over to PART-B, OR vice-versa. Below is the list:  
+- **No Search Bar on Student List page**: This feature aimed to search for a specific student from the database.  
+- **Use of Security Questions**: The Part-A plan did not feature a list of 3 Security Questions a user must input, as a part of the Registration process. It was decided to incorporate it because using a "Password Link" would require complicated email setup which was out-of-scope for this project. Authentication via Security Questions was an easy setup, and it allowed for an additional CRUD operations to be showcased.  
+- **DELETE STUDENT page**: Part-A did not feature a separate page for deleting a student. However, in PART-B it was decided to implement this feature, similar to the EDIT student page. This way, deleting also has prominence.  
+- **Logout button** PART-A did not have a "Logout" button on the Admin Dashboard. This was introduced into PAR-B so that the app can have 2 separate behaviours for a logged in user and a logged out user.  
+
+A lot of new features can be implemented on this website, and there is a plan to work on them in 2025. Hopefully, studentDB can be developed into a much feature-rich web app than what it is now! Neverthless, this version was a lot of fun to design, make and deploy!  
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
