@@ -17,9 +17,11 @@ _Note: A MERN assignment project / For study purposes only / Not offered as an o
 - Server/Backend: https://github.com/emanoj1/studentdb-server 
 
 ### Video Walk-thru 📺
-Check out the full functionalities & features of the website!  
+Check out the full functionalities & features of the website! 👇 
 
 [![Video Walk thru image](./src/docs/images/video-walk-thru-studentdb-ss.png)](https://www.loom.com/share/132bc7bb472a45489ce28d018b19100e?sid=cd6af565-7413-48ff-bb9c-341ecb1dd9d3)
+
+**Kanban board** 👉  [LIVE web view](https://circular-mask-82d.notion.site/T2A3-Assignment-e11875eb787e4311a4e1a6471da0347d)
 
 ---
 ### CONTENTS
@@ -633,6 +635,8 @@ The Kanban board features 3 swimlanes - **Not Started**, **In Progress** and **D
 
 ![Kanban board](./src/docs/kanban/kanban-board-ss.png)  
 
+Click to check out [the Kanban board LIVE on a weblink here!](https://circular-mask-82d.notion.site/T2A3-Assignment-e11875eb787e4311a4e1a6471da0347d)
+
 [Back to top](#deployment-summary)
 
 ---
@@ -680,10 +684,11 @@ The code was written keeping in mind the industry best practices and code organi
 
 ![](./src/docs/images/git-hub-logo-octocat.png)
 
-GitHub was the chosen tool to manage all source control, and it was made easier using GitHun Desktop. 2 repositories were used - for the frontend and the backend.
+GitHub was the chosen tool to manage all source control, and it was made easier using GitHun Desktop.   
+2 repositories were used - one for the frontend and another for the backend.
 ![GitHub Repos](./src/docs/images/github-repo-ss.png)
 
-You can view the repos here:  
+You can view the repos here:👇    
 **Client/Frontend**: https://github.com/emanoj1/studentdb-client  
 **Server/Backend**: https://github.com/emanoj1/studentdb-server  
 
@@ -741,16 +746,16 @@ Below are the deployed links:
 
 Below are some views from their dashboards:
 
-1. Deployment on Netlify (the frontend)
+**1. Deployment on Netlify (the frontend)**
 ![Netlify deployment](./src/docs/images/netlify-deploy-ss.png)
 
-2. Deployment on Render (the backend)
+**2. Deployment on Render (the backend)**
 ![Render deployment](./src/docs/images/render-deploy-ss.png)
 
-3. Deployment to MongoDB (the database)
+**3. Deployment to MongoDB (the database)**
 ![MongoDB deploy](./src/docs/images/mongodb-deploy-ss.png)
 
-4. An example collection on MongoDB
+**4. An example collection on MongoDB**
 ![MongoDB Collections](./src/docs/images/mongodb-collection-ss.png)
 _Security Answers hidden from view on purpose._
 
@@ -778,34 +783,46 @@ The page is styled with a modern & youthful focus, using round-edged and shadowe
 ### Login page  
 ![Login page](./src/docs/images/login-page.png)
 
+The LOGIN page is a clutter-free page with 4 important items on it:
+- Email field
+- Password field
+- The Login submit button
+- A `Forgot Password` link to help reset the password
 
 ### Forgot Password page  
 ![Forgot password page](./src/docs/images/forgot-password-page.png)
 
+This page helps a user log back in by setting up a new password provided he can answer the security answers he supplied when signing up. 
 
 ### Admin Dashboard - landing page  
 ![Admin dashboard](./src/docs/images/admin-dashboard-page.png)
 
+This is the first page you see when you login to the site. It features a menu to the left that deals with the various CRUD operations and there is a logout button the top-left.
 
 ### Admin Dashboard - Student List page  
 ![Student List](./src/docs/images/student-list-page.png)
 
+This page loads all the students in the database of that specific institute. it also features an Edit and a Delete button for student row.
 
 ### Admin Dashboard - Add Student page  
 ![Add Student](./src/docs/images/add-student-page.png)
 
+As the name implies, the Add Student page is the place to begin your data entry work of adding students. Only the main information is required of the student, and upon submitting the form, it stays on the page to help you continue with the data entry work. If you want to see the student entered, you can navigate to the Student List page.
 
 ### Admin Dashboard - Admin Settings page  
 ![Admin Settings](./src/docs/images/admin-settings-page.png)
 
+On this page, the logged-in Institute Admin can change their details, whether it be their name, email id, institute details, the security answers or their password. By default, it populates their name, contact email and institute details. Security related info is not displayed.
 
 ### Contact Us page  
 ![Contact](./src/docs/images/contact-page.png)
 
 The Contact page uses a 3rd widget [Tally.so](https://tally.so) which is embedded to the page as an iFrame widget. Upon submission of content from this page, the information reaches the web app owner by email. Using 3rd party widget is far easier to implement and maintain compared to building a custom form on the page.
 
-All pages of the website also feature a LIVE Chat bubble, also a 3rd party widget from [Tawk](https://tawk.to):
+### LIVE Chat pop-up
 ![Chat box](./src/docs/images/chat-widget.png)
+
+All pages of the website also feature a LIVE Chat bubble, also a 3rd party widget from [Tawk](https://tawk.to):
 
 [Back to top](#deployment-summary)
 
@@ -816,7 +833,7 @@ Every item on the website was manually checked to ensure that they were working 
 
 So, the one document captured both the development and production statuses.
 
-#### Where was it captured?
+#### Where is it captured?
 An excel document was maintained which listed all the items to be tested for each page of the website. This is the format:
 - **Test #**: This is a serial number assigned to the test, as simple as 1,2,3, etc.
 - **Testing Item**: A short info on what is going to be tested.
@@ -844,9 +861,9 @@ The excel document maintained multiple sheets (5 sheets), each one capturing a s
 - **Admin Dashboard**: Testing to see how the Admin (logged-in state) pages work (stats, CRUD operations, etc).
 - **LIVE Chat Widget**: Test if the LIVE chat widget is working or not.
 
-#### Evidence of the full testing:
+#### Evidence of the full testing
 
-Below are screenshots from the 5 main testing areas. Only a snapshot has been provided below as the sheet for some of the test is rather a long one.
+Below are screenshots of the Excel document showing the 5 main testing areas explained above:  
 
 ### Manual unit test website responsiveness  
 ![Manual test-responsiveness](./src/docs/images/user-test-device-responsive.png)
@@ -858,38 +875,54 @@ Below are screenshots from the 5 main testing areas. Only a snapshot has been pr
 ### Manual unit test on the Navigarion bar  
 ![Manual test-Nav](./src/docs/images/user-test-navbar.png)
 
-### Manual unit test on the Admin Dashboard
+### Manual unit test on the Admin Dashboard  
 ![Manual test-all admin 1](./src/docs/images/user-test-admin-dashboard.png)
 ![Manual test-all admin 2](./src/docs/images/user-test-page-2-admin.png)
 
-### Manual unit test for the presence of the LIVE Chat widget
+### Manual unit test for the presence of the LIVE Chat widget  
 ![Manual test Chat](./src/docs/images/unit-test-live-chat.png)
 
 [Back to top](#deployment-summary)
 
 # R9 Utilising a formal testing framework
 
+**Jest** is a popular testing framework for JavaScript applications, particularly well-suited for testing React applications. It provides a way to test our code and ensure that it works as expected.  
+
+A total of 7 tests were done, 6 on the Client-side and 1 on the Server-side.  
+
+Below are the Terminal results for each of the above tests:
+
 ### Client-side
 
-**Test - the Register button**
-![](./src/docs/images/jest-register-pass.png)
+**Test 1 - the Register button**
+![Jest-Register](./src/docs/images/jest-register-pass.png)  
+This is the Jest test for the Register button on the navigation bar.
 
-**Test - the Registration submission function**
-![](./src/docs/images/jest-registration-pass.png)
+**Test 2 - the Registration submission function**
+![Jest-Registration](./src/docs/images/jest-registration-pass.png)  
+This is the Jest test for the Registration button.
 
-**Test - the Login function**
-![](./src/docs/images/jest-login-pass.png)
+**Test 3 - the Login function**
+![Jest-Login](./src/docs/images/jest-login-pass.png)  
+This is the Jest test for the Login button.
 
-**Test - the Forgot Password function**
-![](./src/docs/images/jest-forgotpassword-pass.png)
+**Test 4 - the Forgot Password function**
+![Jest-Password](./src/docs/images/jest-forgotpassword-pass.png)  
+This is the Jest test for testing the Forgot Password button function.
 
-**Test - the appearance of the Contact form widget**
-![](./src/docs/images/jest-contact-pass.png)
+**Test 5 - the Student List function**
+![Jest-Contact](./src/docs/images/jest-contact-pass.png)
+
+**Test 6 - the Contact form widget**
+![Jest-Contact](./src/docs/images/jest-contact-pass.png)  
+This is the Jest test for the Contact page. The aim is:
+- To test - the presence of the iFrame element on the Contact page
+- To test - the correctness of the src attribute of the iFrame
 
 ### Server-side
 
-**Test - Check user login**
-![](./src/docs/images/jest-server-login-test-pass.png)
+**Test 6 - Check user login**
+![Jest-login](./src/docs/images/jest-server-login-test-pass.png)
 
 [Back to top](#deployment-summary)
 
